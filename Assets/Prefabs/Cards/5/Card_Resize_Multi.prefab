@@ -10,15 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Mega_Score
+      value: Card_Resize_Multi
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
-      propertyPath: card
-      value: 13
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Price
@@ -106,17 +102,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Add 50 score for every Mega ball in the bowl
+      value: Gain 0.5 multi for every Resize ball in the bowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_fontStyle
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: 'Mega Score
-
-'
+      value: Resize Multi
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 21.4
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

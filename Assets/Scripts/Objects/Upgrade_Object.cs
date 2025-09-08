@@ -11,9 +11,11 @@ public class Upgrade_Object : ScriptableObject
     [Range(1, 20)]
     public int UpgradeCap = 5;
     [Range(1,4)]
-    public int BollSize = 1;
+    public int BowlSize = 1;
+    int BowlSizeChange = 1;
     [Range(0.5f, 2)]
     public float BallSize = 1;
+    float BallSizeChange = 1;
 
     [Header("Spacial balls")]
     [Range(0, 20)]
@@ -32,6 +34,9 @@ public class Upgrade_Object : ScriptableObject
     public bool MegaBallMulti;
     public bool GoldBallMulti;
     public bool ResizeBallMulti;
+    public bool BasicMulti1;
+    public bool BasicMulti2;
+    public bool BasicMulti3;
 
     [Header("Score Upgrades")]
     public bool TinyBallScore;
@@ -42,6 +47,22 @@ public class Upgrade_Object : ScriptableObject
     public bool MegaBallScore;
     public bool GoldBallScore;
     public bool ResizeBallScore;
+    public bool BasicScore1;
+    public bool BasicScore2;
+    public bool BasicScore3;
+
+    [Header("Score And Multi Upgrades")]
+    public bool MediumIsPremium;
+
+    [Header("Boll Upgrades")]
+    public bool BowlSizeBasic;
+    public bool BowlSizeForBallSize;
+    public bool BowlSizeForEachMega;
+
+    [Header("Ball Size Upgrades")]
+    public bool BallSizeBasic;
+    public bool BallSizeForBowlSize;
+    public bool BallSizeForEachMega;
 
     public bool CheckUpgrade(Upgrades upgrade)
     {
@@ -69,12 +90,56 @@ public class Upgrade_Object : ScriptableObject
         }
 
         BallSize = 1;
-        BollSize = 1;
+        BowlSize = 1;
         ResizeBall = 0;
         DeleteBall = 0;
         GoldBall = 0;
         NumberOfUpgrades = 0;
         UpgradeCap = 5;
+        BallSizeChange = 1;
+        BowlSizeChange = 1;
+    }
+
+    public void ChangeBowlSize(int amount)
+    {
+        BowlSizeChange += amount;
+        if (BowlSizeChange > 0 && BowlSizeChange <= 4)
+        {
+            BowlSize = BowlSizeChange;
+        }
+        else
+        {
+            if (BowlSizeChange < 0)
+            {
+                BowlSize = 1;
+            }
+
+            if (BowlSizeChange > 4)
+            {
+                BowlSize = 4;
+            }
+        }
+    }
+
+    public void ChangeBallSize(float amount)
+    {
+        BallSizeChange += amount;
+        if (BallSizeChange > 0.5f && BallSizeChange <= 2)
+        {
+            BallSize = BallSizeChange;
+        }
+        else
+        {
+            if (BallSizeChange < 0.5f)
+            {
+                BallSize = 0.5f;
+            }
+
+            if (BallSizeChange > 2)
+            {
+                BallSize = 2;
+            }
+        }
     }
 }
 
@@ -96,4 +161,17 @@ public enum Upgrades
     MegaBallScore,
     GoldBallScore,
     ResizeBallScore,
+    BowlSizeBasic,
+    BowlSizeForBallSize,
+    BowlSizeForEachMega,
+    BallSizeBasic,
+    BallSizeForBowlSize,
+    BallSizeForEachMega,
+    MediumIsPremium,
+    BasicMulti1,
+    BasicMulti2,
+    BasicMulti3,
+    BasicScore1,
+    BasicScore2,
+    BasicScore3,
 }

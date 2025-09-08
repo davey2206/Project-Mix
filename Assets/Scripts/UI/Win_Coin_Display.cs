@@ -5,6 +5,7 @@ using UnityEngine;
 public class Win_Coin_Display : MonoBehaviour
 {
     [SerializeField] Level_Manager Level;
+    [SerializeField] Coin_Object LevelCoin;
     [SerializeField] GameObject Coin;
 
     private void OnEnable()
@@ -19,10 +20,12 @@ public class Win_Coin_Display : MonoBehaviour
 
     IEnumerator Coins()
     {
-        for (int i = 0; i < Level.GetLevel().Coins; i++)
+        float coins = Level.GetLevel().Coins + LevelCoin.LevelCoin;
+        for (int i = 0; i < coins; i++)
         {
             yield return new WaitForSeconds(0.2f);
             Instantiate(Coin, transform);
         }
+        LevelCoin.LevelCoin = 0;
     }
 }

@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Small_Multi
+      value: Card_Basic_Score1
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 1
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Price
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5375970615718894302, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Pivot.x
@@ -106,15 +106,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Gain 0.1 multi for every Small ball in the bowl
+      value: Gain 50 score
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Small Multi
+      value: Score 1
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 22.8
+      value: 22.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Medium_Score
+      value: Card_Basic_Score3
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 10
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Price
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5375970615718894302, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Pivot.x
@@ -106,15 +106,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Add 25 score for every Medium ball in the bowl
+      value: Gain 150 score
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Medium Score
+      value: Score 3
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 18.35
+      value: 22.65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

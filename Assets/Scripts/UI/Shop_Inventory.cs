@@ -3,12 +3,26 @@ using UnityEngine;
 
 public class Shop_Inventory : MonoBehaviour
 {
+    [SerializeField] Transform Pool;
     [SerializeField] List<Upgrade_Card> Cards;
     [SerializeField] Upgrade_Object AllUpgrades;
+
+    private void Awake()
+    {
+        GetCards();
+    }
 
     private void OnEnable()
     {
         UpdateCards();
+    }
+
+    public void GetCards()
+    {
+        foreach (Transform child in Pool)
+        {
+            Cards.Add(child.GetComponent<Upgrade_Card>());
+        }
     }
 
     public void UpdateCards()

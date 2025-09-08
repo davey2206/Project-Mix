@@ -12,6 +12,12 @@ public class Spawn_Ball : MonoBehaviour
 
     bool canSpawn = true;
 
+    private void OnEnable()
+    {
+        canSpawn = true;
+        Order.ResetToCurrent();
+    }
+
     // Update is called once per frame
     void Update()
     {

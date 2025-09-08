@@ -5,6 +5,8 @@ public class Coin_Object : ScriptableObject
 {
     [SerializeField] float Coin;
 
+    public float LevelCoin;
+
     public void AddCoin(float coin)
     {
         Coin += coin;

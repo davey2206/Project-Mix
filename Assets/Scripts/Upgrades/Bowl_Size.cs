@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boll_Size : MonoBehaviour
+public class Bowl_Size : MonoBehaviour
 {
     [SerializeField] List<GameObject> Bolls;
     [SerializeField] Upgrade_Object Upgrades;
@@ -9,7 +9,7 @@ public class Boll_Size : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (Upgrades.BollSize)
+        switch (Upgrades.BowlSize)
         {
             case 1:
                 Bolls[0].SetActive(true);

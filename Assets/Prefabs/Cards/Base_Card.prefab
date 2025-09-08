@@ -518,7 +518,7 @@ MonoBehaviour:
   IsSell: 0
   Coins: {fileID: 11400000, guid: d8ead341cbd4d7249a29e81b08ff1957, type: 2}
   AllUpgrades: {fileID: 11400000, guid: 8ff0024cae65bfc43887d3eed46ff0ca, type: 2}
-  Deck: {fileID: 11400000, guid: 9439501b7494ed6468af4dac9fbfcdf5, type: 2}
+  inventory: {fileID: 0}
   BuyPrice: {fileID: 3197657837333429890}
   BuyPriceText: {fileID: 4731089576190826278}
   SellPrice: {fileID: 5568357439290329414}
@@ -654,6 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57fbaed110aae0a48b2c876df5a853a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableHoverDuration: 0.25
 --- !u!1 &4307068705672122303
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,11 @@ public class Goal_Manager : MonoBehaviour
     [SerializeField] GameObject Win;
     public bool LevelDone;
 
+    private void OnEnable()
+    {
+        Coins.LevelCoin = 0;
+    }
+
     void Update()
     {
         if (level_Manager.CheckIfGoalHit() && !LevelDone)
@@ -52,7 +57,7 @@ public class Goal_Manager : MonoBehaviour
         {
             Win.SetActive(true);
             Countdown.SetActive(false);
-            Coins.AddCoin(level_Manager.GetLevel().Coins);
+            Coins.AddCoin(level_Manager.GetLevel().Coins + Coins.LevelCoin);
         }
     }
 }

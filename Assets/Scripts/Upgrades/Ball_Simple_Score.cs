@@ -32,34 +32,18 @@ public class Ball_Simple_Score : MonoBehaviour
         };
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void SimpleScoreEnter(Ball ball)
     {
-        if (collision.CompareTag("Ball"))
-        {
-            BallSize size = collision.GetComponent<Ball>().GetSize();
-            HandleScore(size, add: true);
-        }
+        HandleScore(ball.GetSize());
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Ball"))
-        {
-            BallSize size = collision.GetComponent<Ball>().GetSize();
-            HandleScore(size, add: false);
-        }
-    }
-
-    private void HandleScore(BallSize size, bool add)
+    private void HandleScore(BallSize size)
     {
         if (ballData.TryGetValue(size, out var data))
         {
-            if (add)
+            if (data.upgradeCheck.Invoke())
             {
-                if (data.upgradeCheck.Invoke())
-                {
-                    Score.AddScore(data.Score);
-                }
+                Score.AddScore(data.Score);
             }
         }
     }

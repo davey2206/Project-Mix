@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - Bomb
   - Resize
+  - Gold
   layers:
   - Default
   - TransparentFX

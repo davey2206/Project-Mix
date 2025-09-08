@@ -10,8 +10,9 @@ public class Ball : MonoBehaviour
     [Header("Score")]
     [SerializeField] double Score;
     [SerializeField] Score_Object Score_Counter;
-    [Header("GameOver")]
+    [Header("Events")]
     [SerializeField] UnityEvent GameOverEvents;
+    [SerializeField] UnityEvent <Ball> MergeEvent;
     [Header("Effects")]
     [SerializeField] AudioSource PopAudio;
     [SerializeField] GameObject PopEffect;
@@ -24,10 +25,12 @@ public class Ball : MonoBehaviour
         {
             Ball otherBall = collision.gameObject.GetComponent<Ball>();
 
-            if (otherBall != null && otherBall.GetSize() == Size && Size != BallSize.Mega)
+            if (otherBall != null && otherBall.GetSize() == Size && Size != BallSize.Mega && Size != BallSize.Gold && Size != BallSize.Resize && Size != BallSize.Multi)
             {
                 if (!isDisabled && GetInstanceID() < otherBall.GetInstanceID())
                 {
+                    MergeEvent?.Invoke(this);
+
                     DisableSelf();
                     otherBall.DisableSelf();
 

@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 984083984631819722}
   - component: {fileID: 8579438547827654959}
   - component: {fileID: 842748750651418631}
-  - component: {fileID: 2226062790061385303}
+  - component: {fileID: 415372679955076516}
   m_Layer: 0
   m_Name: Resize
   m_TagString: Resize
@@ -187,28 +187,40 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.4
---- !u!95 &2226062790061385303
-Animator:
-  serializedVersion: 7
+--- !u!114 &415372679955076516
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4105108537718698307}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3afbb56c3e8acd6478cfed05f44aa363, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58729da0afc1025459706f01f018a94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: 7
+  NextBall: {fileID: 0}
+  RigidbodyBall: {fileID: 8579438547827654959}
+  Score: 0
+  Score_Counter: {fileID: 11400000, guid: 25b678048078d3848bc815f030feb236, type: 2}
+  GameOverEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 25b678048078d3848bc815f030feb236, type: 2}
+        m_TargetAssemblyTypeName: Score_Object, Assembly-CSharp
+        m_MethodName: DisableScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  PopAudio: {fileID: 0}
+  PopEffect: {fileID: 0}
 --- !u!1 &6210216709960383490
 GameObject:
   m_ObjectHideFlags: 0

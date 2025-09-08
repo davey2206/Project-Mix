@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
 
 public class Upgrade_Card : MonoBehaviour
 {
@@ -9,31 +11,48 @@ public class Upgrade_Card : MonoBehaviour
     [SerializeField] float Price;
     [SerializeField] public bool IsSell = false;
 
-    [Header("ref Objects")]
+    [Header("Ref Objects")]
     [SerializeField] Coin_Object Coins;
     [SerializeField] Upgrade_Object AllUpgrades;
 
-    [Header("ref")]
+    [Header("Ref")]
     [SerializeField] Shop_Inventory inventory;
     [SerializeField] GameObject BuyPrice;
     [SerializeField] TextMeshProUGUI BuyPriceText;
     [SerializeField] GameObject SellPrice;
     [SerializeField] TextMeshProUGUI SellPriceText;
 
+    private Dictionary<Upgrades, System.Action<bool>> upgradeActions;
+
     private void Start()
     {
         BuyPriceText.text = Price.ToString();
         SellPriceText.text = (Mathf.FloorToInt(Price / 2)).ToString();
 
-        if (IsSell)
+        BuyPrice.SetActive(!IsSell);
+        SellPrice.SetActive(IsSell);
+
+        InitializeUpgradeActions();
+    }
+
+    private void InitializeUpgradeActions()
+    {
+        upgradeActions = new Dictionary<Upgrades, System.Action<bool>>();
+
+        // Use reflection to get all fields in AllUpgrades
+        FieldInfo[] fields = typeof(Upgrade_Object).GetFields(BindingFlags.Public | BindingFlags.Instance);
+
+        // Loop through the enum values and dynamically create upgrade actions
+        foreach (Upgrades upgrade in System.Enum.GetValues(typeof(Upgrades)))
         {
-            SellPrice.SetActive(true);
-            BuyPrice.SetActive(false);
-        }
-        else
-        {
-            SellPrice.SetActive(false);
-            BuyPrice.SetActive(true);
+            // Build the action for each upgrade
+            FieldInfo field = System.Array.Find(fields, f => f.Name == upgrade.ToString());
+
+            if (field != null)
+            {
+                // Create a lambda function that sets the field to true or false based on the value of the action
+                upgradeActions[upgrade] = value => field.SetValue(AllUpgrades, value);
+            }
         }
     }
 
@@ -56,57 +75,8 @@ public class Upgrade_Card : MonoBehaviour
             Coins.RemoveCoin(Price);
             AllUpgrades.NumberOfUpgrades++;
 
-            switch (Card)
-            {
-                case Upgrades.TinyBallMulti:
-                    AllUpgrades.TinyBallMulti = true;
-                    break;
-                case Upgrades.SmallBallMulti:
-                    AllUpgrades.SmallBallMulti = true;
-                    break;
-                case Upgrades.MediumBallMulti:
-                    AllUpgrades.MediumBallMulti = true;
-                    break;
-                case Upgrades.LargeBallMulti:
-                    AllUpgrades.LargeBallMulti = true;
-                    break;
-                case Upgrades.HugeBallMulti:
-                    AllUpgrades.HugeBallMulti = true;
-                    break;
-                case Upgrades.MegaBallMulti:
-                    AllUpgrades.MegaBallMulti = true;
-                    break;
-                case Upgrades.GoldBallMulti:
-                    AllUpgrades.GoldBallMulti = true;
-                    break;
-                case Upgrades.ResizeBallMulti:
-                    AllUpgrades.ResizeBallMulti = true;
-                    break;
-                case Upgrades.TinyBallScore:
-                    AllUpgrades.TinyBallScore = true;
-                    break;
-                case Upgrades.SmallBallScore:
-                    AllUpgrades.SmallBallScore = true;
-                    break;
-                case Upgrades.MediumBallScore:
-                    AllUpgrades.MediumBallScore = true;
-                    break;
-                case Upgrades.LargeBallScore:
-                    AllUpgrades.LargeBallScore = true;
-                    break;
-                case Upgrades.HugeBallScore:
-                    AllUpgrades.HugeBallScore = true;
-                    break;
-                case Upgrades.MegaBallScore:
-                    AllUpgrades.MegaBallScore = true;
-                    break;
-                case Upgrades.GoldBallScore:
-                    AllUpgrades.GoldBallScore = true;
-                    break;
-                case Upgrades.ResizeBallScore:
-                    AllUpgrades.ResizeBallScore = true;
-                    break;
-            }
+            // Apply the upgrade using the dictionary
+            ApplyUpgrade(Card, true);
 
             StartCoroutine(UpdateInventory());
         }
@@ -117,66 +87,24 @@ public class Upgrade_Card : MonoBehaviour
         Coins.AddCoin(Mathf.FloorToInt(Price / 2));
         AllUpgrades.NumberOfUpgrades--;
 
-        switch (Card)
-        {
-            case Upgrades.TinyBallMulti:
-                AllUpgrades.TinyBallMulti = false;
-                break;
-            case Upgrades.SmallBallMulti:
-                AllUpgrades.SmallBallMulti = false;
-                break;
-            case Upgrades.MediumBallMulti:
-                AllUpgrades.MediumBallMulti = false;
-                break;
-            case Upgrades.LargeBallMulti:
-                AllUpgrades.LargeBallMulti = false;
-                break;
-            case Upgrades.HugeBallMulti:
-                AllUpgrades.HugeBallMulti = false;
-                break;
-            case Upgrades.MegaBallMulti:
-                AllUpgrades.MegaBallMulti = false;
-                break;
-            case Upgrades.GoldBallMulti:
-                AllUpgrades.GoldBallMulti = false;
-                break;
-            case Upgrades.ResizeBallMulti:
-                AllUpgrades.ResizeBallMulti = false;
-                break;
-            case Upgrades.TinyBallScore:
-                AllUpgrades.TinyBallScore = false;
-                break;
-            case Upgrades.SmallBallScore:
-                AllUpgrades.SmallBallScore = false;
-                break;
-            case Upgrades.MediumBallScore:
-                AllUpgrades.MediumBallScore = false;
-                break;
-            case Upgrades.LargeBallScore:
-                AllUpgrades.LargeBallScore = false;
-                break;
-            case Upgrades.HugeBallScore:
-                AllUpgrades.HugeBallScore = false;
-                break;
-            case Upgrades.MegaBallScore:
-                AllUpgrades.MegaBallScore = false;
-                break;
-            case Upgrades.GoldBallScore:
-                AllUpgrades.GoldBallScore = false;
-                break;
-            case Upgrades.ResizeBallScore:
-                AllUpgrades.ResizeBallScore = false;
-                break;
-        }
+        // Remove the upgrade using the dictionary
+        ApplyUpgrade(Card, false);
 
         StartCoroutine(UpdateInventory());
+    }
+
+    private void ApplyUpgrade(Upgrades upgrade, bool enable)
+    {
+        if (upgradeActions.ContainsKey(upgrade))
+        {
+            upgradeActions[upgrade](enable);
+        }
     }
 
     public IEnumerator UpdateInventory()
     {
         yield return new WaitForSeconds(0.25f);
         inventory.UpdateCards();
-
         Destroy(gameObject);
     }
 }

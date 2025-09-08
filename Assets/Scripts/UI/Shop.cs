@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    [SerializeField] Transform Pool;
     [SerializeField] Upgrade_Object Upgrades;
     [SerializeField] List<Upgrade_Card> Cards;
 
@@ -13,7 +14,18 @@ public class Shop : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        GetCards();
         SpawnCards();
+    }
+
+    public void GetCards()
+    {
+        Cards.Clear();
+
+        foreach (Transform child in Pool)
+        {
+            Cards.Add(child.GetComponent<Upgrade_Card>());
+        }
     }
 
     public void SpawnCards()

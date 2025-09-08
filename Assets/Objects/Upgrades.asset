@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6ec1f7d23809a469f3dfd42775de36, type: 3}
   m_Name: Upgrades
   m_EditorClassIdentifier: 
-  NumberOfUpgrades: 0
+  NumberOfUpgrades: 3
   UpgradeCap: 5
-  BollSize: 1
+  BowlSize: 1
   BallSize: 1
-  ResizeBall: 6
-  DeleteBall: 6
+  ResizeBall: 1
+  DeleteBall: 0
   GoldBall: 0
   TinyBallMulti: 0
   SmallBallMulti: 0
@@ -27,6 +27,9 @@ MonoBehaviour:
   MegaBallMulti: 0
   GoldBallMulti: 0
   ResizeBallMulti: 0
+  BasicMulti1: 0
+  BasicMulti2: 0
+  BasicMulti3: 0
   TinyBallScore: 0
   SmallBallScore: 0
   MediumBallScore: 0
@@ -35,3 +38,13 @@ MonoBehaviour:
   MegaBallScore: 0
   GoldBallScore: 0
   ResizeBallScore: 0
+  BasicScore1: 0
+  BasicScore2: 0
+  BasicScore3: 0
+  MediumIsPremium: 0
+  BowlSizeBasic: 0
+  BowlSizeForBallSize: 0
+  BowlSizeForEachMega: 0
+  BallSizeBasic: 0
+  BallSizeForBowlSize: 0
+  BallSizeForEachMega: 0

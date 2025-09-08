@@ -35,34 +35,18 @@ public class Ball_Simple_Multi : MonoBehaviour
         };
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void SimpleMultiEnter(Ball ball)
     {
-        if (collision.CompareTag("Ball"))
-        {
-            BallSize size = collision.GetComponent<Ball>().GetSize();
-            HandleMultiplier(size, add: true);
-        }
+        HandleMultiplier(ball.GetSize());
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Ball"))
-        {
-            BallSize size = collision.GetComponent<Ball>().GetSize();
-            HandleMultiplier(size, add: false);
-        }
-    }
-
-    private void HandleMultiplier(BallSize size, bool add)
+    private void HandleMultiplier(BallSize size)
     {
         if (ballData.TryGetValue(size, out var data))
         {
-            if (add)
+            if (data.upgradeCheck.Invoke())
             {
-                if (data.upgradeCheck.Invoke())
-                {
-                    Score.AddMulti(data.multiplier);
-                }
+                Score.AddMulti(data.multiplier);
             }
         }
     }
