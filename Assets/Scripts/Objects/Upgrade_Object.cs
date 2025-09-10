@@ -64,6 +64,28 @@ public class Upgrade_Object : ScriptableObject
     public bool BallSizeForBowlSize;
     public bool BallSizeForEachMega;
 
+    [Header("Merge Upgrades")]
+    public bool BackToStart;
+    public bool TinyMergeSpawnTiny;
+    public bool SmallMergeSpawnTiny;
+    public bool MediumMergeSpawnTiny;
+    public bool LargeMergeSpawnTiny;
+    public bool HugeMergeSpawnTiny;
+    public bool TinyMergeSpawnGold;
+    public bool SmallMergeSpawnGold;
+    public bool MediumMergeSpawnGold;
+    public bool LargeMergeSpawnGold;
+    public bool HugeMergeSpawnGold;
+
+    [Header("Card Slot Upgrades")]
+    public bool ExtraSlot;
+
+    [Header("Devil Upgrades")]
+    public bool DevilScore;
+    public bool DevilMulti;
+    public bool DevilSize;
+
+
     public bool CheckUpgrade(Upgrades upgrade)
     {
         string fieldName = upgrade.ToString();
@@ -174,4 +196,19 @@ public enum Upgrades
     BasicScore1,
     BasicScore2,
     BasicScore3,
+    BackToStart,
+    TinyMergeSpawnTiny,
+    SmallMergeSpawnTiny,
+    MediumMergeSpawnTiny,
+    LargeMergeSpawnTiny,
+    HugeMergeSpawnTiny,
+    ExtraSlot,
+    DevilScore,
+    DevilMulti,
+    DevilSize,
+    TinyMergeSpawnGold,
+    SmallMergeSpawnGold,
+    MediumMergeSpawnGold,
+    LargeMergeSpawnGold,
+    HugeMergeSpawnGold,
 }

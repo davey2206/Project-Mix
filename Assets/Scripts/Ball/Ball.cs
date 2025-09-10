@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,10 @@ public class Ball : MonoBehaviour
     [Header("Effects")]
     [SerializeField] AudioSource PopAudio;
     [SerializeField] GameObject PopEffect;
+    [Header("Upgrades")]
+    [SerializeField] Upgrade_Object Upgrades;
+    [SerializeField] GameObject TinyBall;
+    [SerializeField] GameObject BlockBall;
 
     bool isDisabled = false;
 
@@ -27,7 +32,24 @@ public class Ball : MonoBehaviour
 
             if (otherBall != null && otherBall.GetSize() == Size && Size != BallSize.Mega && Size != BallSize.Gold && Size != BallSize.Resize && Size != BallSize.Multi)
             {
-                if (!isDisabled && GetInstanceID() < otherBall.GetInstanceID())
+                if (Upgrades.BackToStart && Size == BallSize.Huge && !isDisabled && GetInstanceID() < otherBall.GetInstanceID())
+                {
+                    MergeEvent?.Invoke(this);
+
+                    DisableSelf();
+                    otherBall.DisableSelf();
+
+                    Destroy(otherBall.gameObject);
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Instantiate(TinyBall, new Vector2(Random.Range(transform.position.x - 1f, transform.position.x + 1f), Random.Range(transform.position.y - 1f, transform.position.y + 1f)), Quaternion.identity, transform.parent);
+                    }
+                    Instantiate(BlockBall, new Vector2(Random.Range(transform.position.x - 1f, transform.position.x + 1f), Random.Range(transform.position.y - 1f, transform.position.y + 1f)), Quaternion.identity, transform.parent);
+
+                    Destroy(gameObject);
+                }
+                else if (!isDisabled && GetInstanceID() < otherBall.GetInstanceID())
                 {
                     MergeEvent?.Invoke(this);
 

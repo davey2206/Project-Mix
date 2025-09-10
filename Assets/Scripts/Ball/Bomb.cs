@@ -6,12 +6,17 @@ public class Bomb : MonoBehaviour
     [SerializeField] Score_Object Score;
     [SerializeField] GameObject Effect;
     public List<Ball> Balls = new List<Ball>();
+    public List<GameObject> Blocks = new List<GameObject>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ball"))
         {
             Balls.Add(collision.gameObject.GetComponent<Ball>());
+        }
+        if (collision.CompareTag("Block"))
+        {
+            Blocks.Add(collision.gameObject);
         }
     }
 
@@ -20,6 +25,10 @@ public class Bomb : MonoBehaviour
         if (collision.CompareTag("Ball"))
         {
             Balls.Remove(collision.gameObject.GetComponent<Ball>());
+        }
+        if (collision.CompareTag("Block"))
+        {
+            Blocks.Remove(collision.gameObject);
         }
     }
 
@@ -32,6 +41,11 @@ public class Bomb : MonoBehaviour
             var ball = Balls[i];
             Score.AddScore(ball.GetScore());
             Destroy(ball.gameObject);
+        }
+
+        for (int i = 0; i < Blocks.Count; i++)
+        {
+            Destroy(Blocks[i]);
         }
 
         Destroy(gameObject);
