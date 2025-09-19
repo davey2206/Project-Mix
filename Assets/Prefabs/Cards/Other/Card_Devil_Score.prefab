@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Bowl_Basic
+      value: Card_Devil_Score
       objectReference: {fileID: 0}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -23,18 +23,18 @@ PrefabInstance:
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 7318903707019489495}
+      objectReference: {fileID: 475382154285507148}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Basic
+      value: ClickDevilCard
       objectReference: {fileID: 0}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: Bowl_Upgrades, Assembly-CSharp
+      value: Devil_Size_Upgrade, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 16
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Price
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5375970615718894302, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Pivot.x
@@ -134,15 +134,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Increase size of the Bowl
+      value: All balls have -5 score. if you have all 3 devil cards add 10 score
+        instead
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Bigger bowl
+      value: Devil Score
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 15
+      value: 22.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -150,7 +155,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7318903707019489495}
+      addedObject: {fileID: 475382154285507148}
   m_SourcePrefab: {fileID: 100100000, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
 --- !u!114 &3218840203572224874 stripped
 MonoBehaviour:
@@ -168,7 +173,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
   m_PrefabInstance: {fileID: 1567739416142072748}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7318903707019489495
+--- !u!114 &475382154285507148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,7 +182,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4199972154136524918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096ee80e6ff2c7d409da94abc01f4696, type: 3}
+  m_Script: {fileID: 11500000, guid: 7007afc4bdfecb449842bbf61927c59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Upgrades: {fileID: 11400000, guid: 8ff0024cae65bfc43887d3eed46ff0ca, type: 2}

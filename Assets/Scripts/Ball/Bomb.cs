@@ -5,6 +5,7 @@ public class Bomb : MonoBehaviour
 {
     [SerializeField] Score_Object Score;
     [SerializeField] GameObject Effect;
+    [SerializeField] bool DestroyBlock = true;
     public List<Ball> Balls = new List<Ball>();
     public List<GameObject> Blocks = new List<GameObject>();
 
@@ -14,7 +15,7 @@ public class Bomb : MonoBehaviour
         {
             Balls.Add(collision.gameObject.GetComponent<Ball>());
         }
-        if (collision.CompareTag("Block"))
+        if (collision.CompareTag("Block") && DestroyBlock)
         {
             Blocks.Add(collision.gameObject);
         }
@@ -26,7 +27,7 @@ public class Bomb : MonoBehaviour
         {
             Balls.Remove(collision.gameObject.GetComponent<Ball>());
         }
-        if (collision.CompareTag("Block"))
+        if (collision.CompareTag("Block") && DestroyBlock)
         {
             Blocks.Remove(collision.gameObject);
         }

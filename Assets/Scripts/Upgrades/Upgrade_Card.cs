@@ -68,9 +68,19 @@ public class Upgrade_Card : MonoBehaviour
         }
     }
 
-    public void Buy()
+    public bool CanUpgrade()
     {
         if (Coins.CanBuy(Price) && AllUpgrades.NumberOfUpgrades < AllUpgrades.UpgradeCap)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void Buy()
+    {
+        if (CanUpgrade())
         {
             Coins.RemoveCoin(Price);
             AllUpgrades.NumberOfUpgrades++;

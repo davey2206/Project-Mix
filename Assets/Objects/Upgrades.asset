@@ -15,8 +15,8 @@ MonoBehaviour:
   NumberOfUpgrades: 2
   UpgradeCap: 5
   BowlSize: 1
-  BallSize: 1
-  ResizeBall: 1
+  BallSize: 1.2
+  ResizeBall: 0
   DeleteBall: 0
   GoldBall: 0
   TinyBallMulti: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   BasicMulti1: 0
   BasicMulti2: 0
   BasicMulti3: 0
-  TinyBallScore: 1
+  TinyBallScore: 0
   SmallBallScore: 0
   MediumBallScore: 0
   LargeBallScore: 0
@@ -48,11 +48,11 @@ MonoBehaviour:
   BallSizeBasic: 0
   BallSizeForBowlSize: 0
   BallSizeForEachMega: 0
-  BackToStart: 1
+  BackToStart: 0
   TinyMergeSpawnTiny: 0
   SmallMergeSpawnTiny: 0
   MediumMergeSpawnTiny: 0
-  LargeMergeSpawnTiny: 1
+  LargeMergeSpawnTiny: 0
   HugeMergeSpawnTiny: 0
   TinyMergeSpawnGold: 0
   SmallMergeSpawnGold: 0
@@ -61,5 +61,5 @@ MonoBehaviour:
   HugeMergeSpawnGold: 0
   ExtraSlot: 0
   DevilScore: 0
-  DevilMulti: 0
-  DevilSize: 0
+  DevilMulti: 1
+  DevilSize: 1

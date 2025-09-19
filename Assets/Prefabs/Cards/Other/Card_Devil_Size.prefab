@@ -10,11 +10,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Ball_Size_For_Mega
+      value: Card_Devil_Size
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: -1251154254072485308}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ClickDevilSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Devil_Size_Upgrade, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 21
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card
@@ -22,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Price
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5375970615718894302, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Pivot.x
@@ -106,15 +134,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Decrease the size of the Balls for each Mega ball
+      value: All balls have -5 score. if you have all 3 devil cards add 10 score
+        instead
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Ball size for mega
+      value: Devil Size
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 17.85
+      value: 22.8
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_TextWrappingMode
@@ -123,5 +152,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1251154254072485308}
   m_SourcePrefab: {fileID: 100100000, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+--- !u!114 &3218840203572224874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+  m_PrefabInstance: {fileID: 1567739416142072748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4199972154136524918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422a2b9e207119e499421daf45ccc266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4199972154136524918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+  m_PrefabInstance: {fileID: 1567739416142072748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1251154254072485308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4199972154136524918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7007afc4bdfecb449842bbf61927c59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Upgrades: {fileID: 11400000, guid: 8ff0024cae65bfc43887d3eed46ff0ca, type: 2}
+  Card: {fileID: 3218840203572224874}

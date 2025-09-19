@@ -10,6 +10,7 @@ TagManager:
   - Bomb
   - Resize
   - Gold
+  - Block
   layers:
   - Default
   - TransparentFX

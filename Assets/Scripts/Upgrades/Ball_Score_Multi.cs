@@ -10,6 +10,10 @@ public class Ball_Score_Multi : MonoBehaviour
     [SerializeField] float MediumIsPremiumMulti = 0.1f;
     [SerializeField] float BackToStartScore = 5;
     [SerializeField] float BackToStartMulti = 0.1f;
+    [SerializeField] float DevilScore = -5;
+    [SerializeField] float DevilScoreGood = 10;
+    [SerializeField] float DevilMulti = -0.05f;
+    [SerializeField] float DevilMultiGood = 0.1f;
 
     public void Enter(Ball ball)
     {
@@ -27,6 +31,28 @@ public class Ball_Score_Multi : MonoBehaviour
         {
             Score.AddScore(BackToStartScore);
             Score.AddMulti(BackToStartMulti);
+        }
+        if (Upgrades.DevilScore)
+        {
+            if (Upgrades.DevilMulti && Upgrades.DevilSize)
+            {
+                Score.AddScore(DevilScoreGood);
+            }
+            else
+            {
+                Score.AddScore(DevilScore);
+            }
+        }
+        if (Upgrades.DevilMulti)
+        {
+            if (Upgrades.DevilScore && Upgrades.DevilSize)
+            {
+                Score.AddMulti(DevilMultiGood);
+            }
+            else
+            {
+                Score.AddMulti(DevilMulti);
+            }
         }
     }
 }

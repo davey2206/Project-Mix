@@ -3,9 +3,17 @@ using UnityEngine;
 public class Card_Slot_Upgrade : MonoBehaviour
 {
     [SerializeField] Upgrade_Object Upgrades;
+    [SerializeField] Upgrade_Card Card;
 
     public void BasicExtraSlot()
     {
-        Upgrades.UpgradeCap += 2;
+        if (!Card.IsSell && Card.CanUpgrade())
+        {
+            Upgrades.UpgradeCap += 2;
+        }
+        if (Card.IsSell)
+        {
+            Upgrades.UpgradeCap -= 2;
+        }
     }
 }

@@ -5,6 +5,7 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] Transform Pool;
     [SerializeField] Upgrade_Object Upgrades;
+    [SerializeField] Coin_Object Coins;
     [SerializeField] List<Upgrade_Card> Cards;
 
     private void OnEnable()
@@ -16,6 +17,19 @@ public class Shop : MonoBehaviour
 
         GetCards();
         SpawnCards();
+    }
+
+    public void RerollShop()
+    {
+        if (Coins.CanBuy(3))
+        {
+            Coins.RemoveCoin(3);
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
+            }
+            SpawnCards();
+        }
     }
 
     public void GetCards()

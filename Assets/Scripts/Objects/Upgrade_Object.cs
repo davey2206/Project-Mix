@@ -58,6 +58,7 @@ public class Upgrade_Object : ScriptableObject
     public bool BowlSizeBasic;
     public bool BowlSizeForBallSize;
     public bool BowlSizeForEachMega;
+    public bool BowlExtraSlot;
 
     [Header("Ball Size Upgrades")]
     public bool BallSizeBasic;
@@ -211,4 +212,5 @@ public enum Upgrades
     MediumMergeSpawnGold,
     LargeMergeSpawnGold,
     HugeMergeSpawnGold,
+    BowlExtraSlot,
 }
