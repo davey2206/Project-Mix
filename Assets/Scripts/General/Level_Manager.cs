@@ -39,6 +39,10 @@ public class Level_Manager : MonoBehaviour
     public void IncreaseLevel()
     {
         lvl++;
+        if (lvl > 10)
+        {
+            lvl = 10;
+        }
     }
 
     public bool CheckIfGoalHit()

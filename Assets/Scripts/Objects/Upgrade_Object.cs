@@ -10,12 +10,13 @@ public class Upgrade_Object : ScriptableObject
     [Header("General Upgrades")]
     [Range(1, 20)]
     public int UpgradeCap = 5;
+    public int UpgradeCapChange = 5;
     [Range(1,4)]
     public int BowlSize = 1;
-    int BowlSizeChange = 1;
+    public int BowlSizeChange = 1;
     [Range(0.5f, 2)]
     public float BallSize = 1;
-    float BallSizeChange = 1;
+    public float BallSizeChange = 1;
 
     [Header("Spacial balls")]
     [Range(0, 20)]
@@ -25,7 +26,7 @@ public class Upgrade_Object : ScriptableObject
     [Range(0,20)]
     public int GoldBall = 0;
 
-    [Header("Multi Upgrades")]
+    [Header("Upgrades")]
     public bool TinyBallMulti;
     public bool SmallBallMulti;
     public bool MediumBallMulti;
@@ -37,8 +38,7 @@ public class Upgrade_Object : ScriptableObject
     public bool BasicMulti1;
     public bool BasicMulti2;
     public bool BasicMulti3;
-
-    [Header("Score Upgrades")]
+    public bool RandomMulti;
     public bool TinyBallScore;
     public bool SmallBallScore;
     public bool MediumBallScore;
@@ -50,41 +50,39 @@ public class Upgrade_Object : ScriptableObject
     public bool BasicScore1;
     public bool BasicScore2;
     public bool BasicScore3;
-
-    [Header("Score And Multi Upgrades")]
     public bool MediumIsPremium;
-
-    [Header("Boll Upgrades")]
+    public bool MultiScore1;
+    public bool MultiScore2;
+    public bool MultiScore3;
     public bool BowlSizeBasic;
     public bool BowlSizeForBallSize;
     public bool BowlSizeForEachMega;
     public bool BowlExtraSlot;
-
-    [Header("Ball Size Upgrades")]
     public bool BallSizeBasic;
     public bool BallSizeForBowlSize;
     public bool BallSizeForEachMega;
-
-    [Header("Merge Upgrades")]
     public bool BackToStart;
-    public bool TinyMergeSpawnTiny;
     public bool SmallMergeSpawnTiny;
-    public bool MediumMergeSpawnTiny;
-    public bool LargeMergeSpawnTiny;
-    public bool HugeMergeSpawnTiny;
-    public bool TinyMergeSpawnGold;
+    public bool BigMergeSpawnTiny;
     public bool SmallMergeSpawnGold;
-    public bool MediumMergeSpawnGold;
-    public bool LargeMergeSpawnGold;
-    public bool HugeMergeSpawnGold;
-
-    [Header("Card Slot Upgrades")]
+    public bool BigMergeSpawnGold;
     public bool ExtraSlot;
-
-    [Header("Devil Upgrades")]
     public bool DevilScore;
     public bool DevilMulti;
     public bool DevilSize;
+    public bool GoldenBonus;
+    public bool GildedMerge;
+    public bool GoldenPath;
+    public bool GoldenMulti;
+    public bool GoldenEcho;
+    public bool GoldenResizer;
+    public bool GoldenBowl;
+    public bool LuckyFusion;
+    public bool IncreaseMergeSpawns;
+    public bool ExplosiveBalls;
+    public bool FinalSpark;
+    public bool TinyMechine;
+    public bool GoldenSlot;
 
 
     public bool CheckUpgrade(Upgrades upgrade)
@@ -121,47 +119,57 @@ public class Upgrade_Object : ScriptableObject
         UpgradeCap = 5;
         BallSizeChange = 1;
         BowlSizeChange = 1;
+        UpgradeCapChange = 5;
     }
 
     public void ChangeBowlSize(int amount)
     {
         BowlSizeChange += amount;
-        if (BowlSizeChange > 0 && BowlSizeChange <= 4)
+        if (BowlSizeChange < 0)
         {
-            BowlSize = BowlSizeChange;
+            BowlSize = 1;
+        }
+        else if(BowlSizeChange > 4)
+        {
+            BowlSize = 4;
         }
         else
         {
-            if (BowlSizeChange < 0)
-            {
-                BowlSize = 1;
-            }
-
-            if (BowlSizeChange > 4)
-            {
-                BowlSize = 4;
-            }
+            BowlSize = BowlSizeChange;
         }
     }
 
     public void ChangeBallSize(float amount)
     {
         BallSizeChange += amount;
-        if (BallSizeChange > 0.5f && BallSizeChange <= 2)
+        if (BallSizeChange < 0.5f)
         {
-            BallSize = BallSizeChange;
+            BallSize = 0.5f;
+        }
+        else if(BallSizeChange > 2)
+        {
+            BallSize = 2;
         }
         else
         {
-            if (BallSizeChange < 0.5f)
-            {
-                BallSize = 0.5f;
-            }
+            BallSize = BallSizeChange;
+        }
+    }
 
-            if (BallSizeChange > 2)
-            {
-                BallSize = 2;
-            }
+    public void ChangeSlots(int amount)
+    {
+        UpgradeCapChange += amount;
+        if (BowlSizeChange < 0)
+        {
+            UpgradeCap = 1;
+        }
+        else if (BowlSizeChange > 20)
+        {
+            UpgradeCap = 20;
+        }
+        else
+        {
+            UpgradeCap = UpgradeCapChange;
         }
     }
 }
@@ -198,19 +206,30 @@ public enum Upgrades
     BasicScore2,
     BasicScore3,
     BackToStart,
-    TinyMergeSpawnTiny,
     SmallMergeSpawnTiny,
-    MediumMergeSpawnTiny,
-    LargeMergeSpawnTiny,
-    HugeMergeSpawnTiny,
+    BigMergeSpawnTiny,
     ExtraSlot,
     DevilScore,
     DevilMulti,
     DevilSize,
-    TinyMergeSpawnGold,
     SmallMergeSpawnGold,
-    MediumMergeSpawnGold,
-    LargeMergeSpawnGold,
-    HugeMergeSpawnGold,
+    BigMergeSpawnGold,
     BowlExtraSlot,
+    MultiScore1,
+    MultiScore2,
+    MultiScore3,
+    GoldenBonus,
+    GildedMerge,
+    GoldenSlot,
+    GoldenPath,
+    LuckyFusion,
+    GoldenMulti,
+    RandomMulti,
+    GoldenEcho,
+    IncreaseMergeSpawns,
+    GoldenResizer,
+    ExplosiveBalls,
+    FinalSpark,
+    GoldenBowl,
+    TinyMechine,
 }

@@ -9,11 +9,11 @@ public class Card_Slot_Upgrade : MonoBehaviour
     {
         if (!Card.IsSell && Card.CanUpgrade())
         {
-            Upgrades.UpgradeCap += 2;
+            Upgrades.ChangeSlots(2);
         }
         if (Card.IsSell)
         {
-            Upgrades.UpgradeCap -= 2;
+            Upgrades.ChangeSlots(-2);
         }
     }
 }

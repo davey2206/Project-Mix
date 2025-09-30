@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6ec1f7d23809a469f3dfd42775de36, type: 3}
   m_Name: Upgrades
   m_EditorClassIdentifier: 
-  NumberOfUpgrades: 2
+  NumberOfUpgrades: 0
   UpgradeCap: 5
+  UpgradeCapChange: 5
   BowlSize: 1
-  BallSize: 1.2
+  BowlSizeChange: 1
+  BallSize: 1
+  BallSizeChange: 1
   ResizeBall: 0
   DeleteBall: 0
   GoldBall: 0
@@ -30,6 +33,7 @@ MonoBehaviour:
   BasicMulti1: 0
   BasicMulti2: 0
   BasicMulti3: 0
+  RandomMulti: 0
   TinyBallScore: 0
   SmallBallScore: 0
   MediumBallScore: 0
@@ -42,9 +46,13 @@ MonoBehaviour:
   BasicScore2: 0
   BasicScore3: 0
   MediumIsPremium: 0
+  MultiScore1: 0
+  MultiScore2: 0
+  MultiScore3: 0
   BowlSizeBasic: 0
   BowlSizeForBallSize: 0
   BowlSizeForEachMega: 0
+  BowlExtraSlot: 0
   BallSizeBasic: 0
   BallSizeForBowlSize: 0
   BallSizeForEachMega: 0
@@ -61,5 +69,18 @@ MonoBehaviour:
   HugeMergeSpawnGold: 0
   ExtraSlot: 0
   DevilScore: 0
-  DevilMulti: 1
-  DevilSize: 1
+  DevilMulti: 0
+  DevilSize: 0
+  GoldenBonus: 0
+  GildedMerge: 0
+  GoldenPath: 0
+  GoldenMulti: 0
+  GoldenEcho: 0
+  GoldenResizer: 0
+  GoldenBowl: 0
+  LuckyFusion: 0
+  IncreaseMergeSpawns: 0
+  ExplosiveBalls: 0
+  FinalSpark: 0
+  TinyMechine: 0
+  GoldenSlot: 0

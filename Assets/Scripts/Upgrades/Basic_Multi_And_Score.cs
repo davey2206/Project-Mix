@@ -6,15 +6,22 @@ public class Basic_Multi_And_Score : MonoBehaviour
     [SerializeField] Upgrade_Object Upgrades;
     [SerializeField] Score_Object Score;
     [SerializeField] Level_Manager Level;
+    [SerializeField] Coin_Object Coins;
 
     [Header("Stats Multi")]
     [SerializeField] float Multi1 = 5;
     [SerializeField] float Multi2 = 10;
     [SerializeField] float Multi3 = 20;
+    [SerializeField] float ScoreMulti1 = 1;
+    [SerializeField] float ScoreMulti2 = 1.5f;
+    [SerializeField] float ScoreMulti3 = 2;
     [Header("Stats Score")]
     [SerializeField] float Score1 = 50;
     [SerializeField] float Score2 = 100;
     [SerializeField] float Score3 = 150;
+    [SerializeField] float MultiScore1 = 25;
+    [SerializeField] float MultiScore2 = 50;
+    [SerializeField] float MultiScore3 = 100;
 
     private void OnEnable()
     {
@@ -48,6 +55,66 @@ public class Basic_Multi_And_Score : MonoBehaviour
         if (Upgrades.BasicScore3 == true)
         {
             Score.AddScore(Score3);
+        }
+        if(Upgrades.MultiScore1 == true)
+        {
+            Score.AddScore(MultiScore1);
+            Score.AddMulti(ScoreMulti1);
+        }
+        if (Upgrades.MultiScore2 == true)
+        {
+            Score.AddScore(MultiScore2);
+            Score.AddMulti(ScoreMulti2);
+        }
+        if (Upgrades.MultiScore3 == true)
+        {
+            Score.AddScore(MultiScore3);
+            Score.AddMulti(ScoreMulti3);
+        }
+        if (Upgrades.RandomMulti)
+        {
+            int rng = Random.Range(0, 10);
+            float multi = 0;
+            switch (rng)
+            {
+                case 0:
+                    multi = -0.75f;
+                    break;
+                case 1:
+                    multi = -0.50f;
+                    break;
+                case 2:
+                    multi = -0.25f;
+                    break;
+                case 3:
+                    multi = 0.5f;
+                    break;
+                case 4:
+                    multi = 1f;
+                    break;
+                case 5:
+                    multi = 2.5f;
+                    break;
+                case 6:
+                    multi = 5f;
+                    break;
+                case 7:
+                    multi = 10f;
+                    break;
+                case 8:
+                    multi = 15f;
+                    break;
+                case 9:
+                    multi = 20f;
+                    break;
+            }
+
+            Score.AddMulti(multi);
+        }
+        if (Upgrades.GoldenMulti)
+        {
+            float multi = Coins.GetCoin() * 0.1f;
+            Score.AddMulti(multi);
         }
     }
 }

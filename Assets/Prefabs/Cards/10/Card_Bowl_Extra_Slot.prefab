@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Basic
+      value: BowlExtraSlot
       objectReference: {fileID: 0}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: Bowl_Upgrades, Assembly-CSharp
+      value: Bowl_Size_Upgrades, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 44
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card

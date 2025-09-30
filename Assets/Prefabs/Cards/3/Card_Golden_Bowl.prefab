@@ -10,11 +10,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Medium_Merge_Spawn_Gold
+      value: Card_Golden_Bowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2457768678155420040}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SellGoldBowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Gold_Bowl_Sell, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987705698963962533, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 41
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card
@@ -22,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Price
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5375970615718894302, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Pivot.x
@@ -106,34 +134,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: 50% change to spawn Small  Gold ball when merging Medium balls
-      objectReference: {fileID: 0}
-    - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
-      propertyPath: m_fontSize
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 10
+      value: Increase bowl size by 1 every 50 coins owned
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Medium Merge Spawn Gold
+      value: Golden Bowl
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 14.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
-      propertyPath: m_fontSizeMin
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
-      propertyPath: m_TextWrappingMode
-      value: 1
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2457768678155420040}
   m_SourcePrefab: {fileID: 100100000, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+--- !u!114 &3218840203572224874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+  m_PrefabInstance: {fileID: 1567739416142072748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4199972154136524918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422a2b9e207119e499421daf45ccc266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4199972154136524918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+  m_PrefabInstance: {fileID: 1567739416142072748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2457768678155420040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4199972154136524918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafd21b3572375e4490caf764829b1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coins: {fileID: 11400000, guid: d8ead341cbd4d7249a29e81b08ff1957, type: 2}
+  Card: {fileID: 3218840203572224874}
+  Upgrades: {fileID: 11400000, guid: 8ff0024cae65bfc43887d3eed46ff0ca, type: 2}

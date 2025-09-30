@@ -37,14 +37,14 @@ public class Bowl_Size_Upgrades : MonoBehaviour
     {
         if (!Card.IsSell && Card.CanUpgrade())
         {
+            Upgrades.ChangeSlots(1);
             Upgrades.ChangeBowlSize(1);
-            Upgrades.UpgradeCap++;
         }
         
         if (Card.IsSell)
         {
             Upgrades.ChangeBowlSize(-1);
-            Upgrades.UpgradeCap--;
+            Upgrades.ChangeSlots(-1);
         }
     }
 }

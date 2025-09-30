@@ -4,6 +4,7 @@ public class Ball_Score_Multi : MonoBehaviour
 {
     [SerializeField] Upgrade_Object Upgrades;
     [SerializeField] Score_Object Score;
+    [SerializeField] Coin_Object Coins;
 
     [Header("Stats")]
     [SerializeField] float MediumIsPremiumScore = 10;
@@ -14,6 +15,10 @@ public class Ball_Score_Multi : MonoBehaviour
     [SerializeField] float DevilScoreGood = 10;
     [SerializeField] float DevilMulti = -0.05f;
     [SerializeField] float DevilMultiGood = 0.1f;
+    [SerializeField] float GoldenEchoScore = 5;
+    [SerializeField] float GoldenEchoMulti = 0.05f;
+    [SerializeField] float BigMergeSpawnTiny = 0.25f;
+    [SerializeField] float SmallMergeSpawnTiny = 10;
 
     public void Enter(Ball ball)
     {
@@ -53,6 +58,24 @@ public class Ball_Score_Multi : MonoBehaviour
             {
                 Score.AddMulti(DevilMulti);
             }
+        }
+        if (Upgrades.GoldenBonus)
+        {
+            float scoreToAdd = Coins.GetCoin() / 2;
+            Score.AddScore(scoreToAdd);
+        }
+        if (size == BallSize.Gold && Upgrades.GoldenEcho)
+        {
+            Score.AddScore(GoldenEchoScore);
+            Score.AddMulti(GoldenEchoMulti);
+        }
+        if (size == BallSize.tiny && Upgrades.SmallMergeSpawnTiny)
+        {
+            Score.AddScore(SmallMergeSpawnTiny);
+        }
+        if (size == BallSize.tiny && Upgrades.BigMergeSpawnTiny)
+        {
+            Score.AddMulti(BigMergeSpawnTiny);
         }
     }
 }
