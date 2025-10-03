@@ -83,10 +83,8 @@ public class Ball_Score_Multi : MonoBehaviour
         {
             Score.AddScore(SmallMergeSpawnGold);
         }
-        Debug.Log(size);
         if (size == BallSize.Gold && Upgrades.BigMergeSpawnGold)
         {
-            Debug.Log("test");
             Score.AddMulti(BigMergeSpawnGold);
         }
     }
