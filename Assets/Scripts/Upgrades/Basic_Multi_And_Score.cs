@@ -113,7 +113,7 @@ public class Basic_Multi_And_Score : MonoBehaviour
         }
         if (Upgrades.GoldenMulti)
         {
-            float multi = Coins.GetCoin() * 0.1f;
+            float multi = Coins.GetCoin() * 0.50f;
             Score.AddMulti(multi);
         }
     }

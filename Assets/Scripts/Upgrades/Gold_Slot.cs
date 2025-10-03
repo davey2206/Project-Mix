@@ -17,7 +17,7 @@ public class Gold_Slot : MonoBehaviour
 
     void UpdateSlots()
     {
-        int newThreshold = (int)Coins.GetCoin() / 25;
+        int newThreshold = (int)Coins.GetCoin() / 5;
 
         if (newThreshold != lastThreshold)
         {

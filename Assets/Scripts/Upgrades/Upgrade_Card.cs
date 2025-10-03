@@ -99,6 +99,7 @@ public class Upgrade_Card : MonoBehaviour
 
         // Remove the upgrade using the dictionary
         ApplyUpgrade(Card, false);
+        IsSell = false;
 
         StartCoroutine(UpdateInventory());
     }

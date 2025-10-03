@@ -8,17 +8,23 @@ public class Bowl_Upgrades : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ball") && collision.TryGetComponent<Ball>(out Ball ball))
+        if (collision.CompareTag("Ball") || collision.CompareTag("Gold") || collision.CompareTag("Resize"))
         {
-            BallEnterBowl?.Invoke(ball);
+            if (collision.TryGetComponent<Ball>(out Ball ball))
+            {
+                BallEnterBowl?.Invoke(ball);
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ball") && collision.TryGetComponent<Ball>(out Ball ball))
+        if (collision.CompareTag("Ball") || collision.CompareTag("Gold") || collision.CompareTag("Resize"))
         {
-            BallExitBowl?.Invoke(ball);
+            if (collision.TryGetComponent<Ball>(out Ball ball))
+            {
+                BallExitBowl?.Invoke(ball);
+            }
         }
     }
 }

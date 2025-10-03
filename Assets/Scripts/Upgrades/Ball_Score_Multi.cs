@@ -15,10 +15,12 @@ public class Ball_Score_Multi : MonoBehaviour
     [SerializeField] float DevilScoreGood = 10;
     [SerializeField] float DevilMulti = -0.05f;
     [SerializeField] float DevilMultiGood = 0.1f;
-    [SerializeField] float GoldenEchoScore = 5;
-    [SerializeField] float GoldenEchoMulti = 0.05f;
+    [SerializeField] float GoldenEchoScore = 10;
+    [SerializeField] float GoldenEchoMulti = 0.25f;
     [SerializeField] float BigMergeSpawnTiny = 0.25f;
     [SerializeField] float SmallMergeSpawnTiny = 10;
+    [SerializeField] float BigMergeSpawnGold = 0.25f;
+    [SerializeField] float SmallMergeSpawnGold = 10;
 
     public void Enter(Ball ball)
     {
@@ -76,6 +78,16 @@ public class Ball_Score_Multi : MonoBehaviour
         if (size == BallSize.tiny && Upgrades.BigMergeSpawnTiny)
         {
             Score.AddMulti(BigMergeSpawnTiny);
+        }
+        if (size == BallSize.Gold && Upgrades.SmallMergeSpawnGold)
+        {
+            Score.AddScore(SmallMergeSpawnGold);
+        }
+        Debug.Log(size);
+        if (size == BallSize.Gold && Upgrades.BigMergeSpawnGold)
+        {
+            Debug.Log("test");
+            Score.AddMulti(BigMergeSpawnGold);
         }
     }
 }

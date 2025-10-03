@@ -31,6 +31,6 @@ public class Coin_Object : ScriptableObject
 
     public void ResetCoins()
     {
-        Coin = 0;
+        Coin = 5;
     }
 }

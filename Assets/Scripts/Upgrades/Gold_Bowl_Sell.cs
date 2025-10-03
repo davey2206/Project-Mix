@@ -10,7 +10,7 @@ public class Gold_Bowl_Sell : MonoBehaviour
     {
         if (Card.IsSell)
         {
-            int amount = (int)Coins.GetCoin() / 50;
+            int amount = (int)Coins.GetCoin() / 10;
             Upgrades.ChangeBowlSize(-amount);
         }
     }

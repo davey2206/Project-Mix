@@ -67,7 +67,7 @@ public class Merge_Upgrades : MonoBehaviour
         {
             Instantiate(SmallGoldBall, ball.transform.position, Quaternion.identity, BallPool);
         }
-        if (Upgrades.BigMergeSpawnTiny && RNG <= 50 && ball.GetSize() == BallSize.Huge || Upgrades.BigMergeSpawnTiny && RNG <= 50 && ball.GetSize() == BallSize.Large)
+        if (Upgrades.BigMergeSpawnGold && RNG <= 50 && ball.GetSize() == BallSize.Huge || Upgrades.BigMergeSpawnGold && RNG <= 50 && ball.GetSize() == BallSize.Large)
         {
             Instantiate(SmallGoldBall, ball.transform.position, Quaternion.identity, BallPool);
         }

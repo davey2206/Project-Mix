@@ -35274,10 +35274,12 @@ MonoBehaviour:
   DevilScoreGood: 10
   DevilMulti: -0.05
   DevilMultiGood: 0.1
-  GoldenEchoScore: 5
-  GoldenEchoMulti: 0.05
+  GoldenEchoScore: 10
+  GoldenEchoMulti: 0.25
   BigMergeSpawnTiny: 0.25
   SmallMergeSpawnTiny: 10
+  BigMergeSpawnGold: 0.25
+  SmallMergeSpawnGold: 10
 --- !u!114 &2146911443
 MonoBehaviour:
   m_ObjectHideFlags: 0
