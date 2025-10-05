@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6ec1f7d23809a469f3dfd42775de36, type: 3}
   m_Name: Upgrades
   m_EditorClassIdentifier: 
-  NumberOfUpgrades: 2
-  UpgradeCap: 28
-  UpgradeCapChange: 28
-  BowlSize: 4
-  BowlSizeChange: 12
+  NumberOfUpgrades: 0
+  UpgradeCap: 5
+  UpgradeCapChange: 5
+  BowlSize: 1
+  BowlSizeChange: 1
   BallSize: 1
   BallSizeChange: 1
   ResizeBall: 0
   DeleteBall: 0
-  GoldBall: 1
+  GoldBall: 0
   TinyBallMulti: 0
   SmallBallMulti: 0
   MediumBallMulti: 0
   LargeBallMulti: 0
   HugeBallMulti: 0
   MegaBallMulti: 0
-  GoldBallMulti: 1
+  GoldBallMulti: 0
   ResizeBallMulti: 0
   BasicMulti1: 0
   BasicMulti2: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   LargeBallScore: 0
   HugeBallScore: 0
   MegaBallScore: 0
-  GoldBallScore: 1
+  GoldBallScore: 0
   ResizeBallScore: 0
   BasicScore1: 0
   BasicScore2: 0
@@ -59,22 +59,22 @@ MonoBehaviour:
   BackToStart: 0
   SmallMergeSpawnTiny: 0
   BigMergeSpawnTiny: 0
-  SmallMergeSpawnGold: 1
-  BigMergeSpawnGold: 1
+  SmallMergeSpawnGold: 0
+  BigMergeSpawnGold: 0
   ExtraSlot: 0
   DevilScore: 0
   DevilMulti: 0
   DevilSize: 0
-  GoldenBonus: 1
-  GildedMerge: 1
-  GoldenPath: 1
-  GoldenMulti: 1
-  GoldenEcho: 1
-  GoldenResizer: 1
-  GoldenBowl: 1
-  LuckyFusion: 1
+  GoldenBonus: 0
+  GildedMerge: 0
+  GoldenPath: 0
+  GoldenMulti: 0
+  GoldenEcho: 0
+  GoldenResizer: 0
+  GoldenBowl: 0
+  LuckyFusion: 0
   IncreaseMergeSpawns: 0
-  ExplosiveBalls: 1
+  ExplosiveBalls: 0
   FinalSpark: 0
   TinyMechine: 0
-  GoldenSlot: 1
+  GoldenSlot: 0

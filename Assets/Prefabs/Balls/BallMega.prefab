@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 1814711731168597262, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d4b4564ad8ca7254c9d41efb905858eb, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1929819427334554767, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7548c5e541e2cbc45a2cc8d97db6082e, type: 3}
+    - target: {fileID: 7416680704394205466, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15f823607652c4644a6e2d330336a41e, type: 3}
     - target: {fileID: 8579438547827654959, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
       propertyPath: m_Mass
       value: 10

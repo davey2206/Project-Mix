@@ -67,7 +67,7 @@ public class Shop : MonoBehaviour
         {
             int randomIndex = Random.Range(0, CardList.Count);
             Upgrade_Card card = CardList[randomIndex];
-
+            card.IsSell = false;
             Instantiate(card, transform);
 
             CardList.RemoveAt(randomIndex);

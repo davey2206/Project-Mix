@@ -10,8 +10,7 @@ public class Gold_Slot_Sell : MonoBehaviour
     {
         if (Card.IsSell)
         {
-            int amount = (int)Coins.GetCoin() / 5;
-            Upgrades.ChangeSlots(-amount);
+            Upgrades.ChangeSlots(-Upgrades.UpgradeCapGoldChange);
         }
     }
 }

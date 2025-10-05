@@ -11,9 +11,11 @@ public class Upgrade_Object : ScriptableObject
     [Range(1, 20)]
     public int UpgradeCap = 5;
     public int UpgradeCapChange = 5;
+    public int UpgradeCapGoldChange = 0;
     [Range(1,4)]
     public int BowlSize = 1;
     public int BowlSizeChange = 1;
+    public int BowlGoldChange = 0;
     [Range(0.5f, 2)]
     public float BallSize = 1;
     public float BallSizeChange = 1;
@@ -120,6 +122,8 @@ public class Upgrade_Object : ScriptableObject
         BallSizeChange = 1;
         BowlSizeChange = 1;
         UpgradeCapChange = 5;
+        UpgradeCapGoldChange = 0;
+        BowlGoldChange = 0;
     }
 
     public void ChangeBowlSize(int amount)

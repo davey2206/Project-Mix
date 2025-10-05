@@ -18,6 +18,7 @@ public class Gold_Bowl : MonoBehaviour
     void UpdateBowlSize()
     {
         int newThreshold = (int)Coins.GetCoin() / 10;
+        Upgrades.BowlGoldChange = newThreshold;
 
         if (newThreshold != lastThreshold)
         {
