@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Medium balls add 10 score and 0.1 multi
+      value: Medium balls add 25 score and 0.25 multi
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text

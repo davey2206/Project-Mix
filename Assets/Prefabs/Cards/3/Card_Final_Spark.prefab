@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Increase_Merge_Spawns
+      value: Card_Tiny_Score 1
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 50
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card
@@ -106,15 +106,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Increase chance of balls spawning on merge by 25%
+      value: When the bowl is almost full, spawn 5 Small Bombs automatically
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Increase Merge Spawns
+      value: Final Spark
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 15.15
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

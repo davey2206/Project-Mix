@@ -15,8 +15,10 @@ MonoBehaviour:
   NumberOfUpgrades: 0
   UpgradeCap: 5
   UpgradeCapChange: 5
+  UpgradeCapGoldChange: 0
   BowlSize: 1
   BowlSizeChange: 1
+  BowlGoldChange: 0
   BallSize: 1
   BallSizeChange: 1
   ResizeBall: 0
@@ -75,6 +77,6 @@ MonoBehaviour:
   LuckyFusion: 0
   IncreaseMergeSpawns: 0
   ExplosiveBalls: 0
-  FinalSpark: 0
+  FinalSpark: 1
   TinyMechine: 0
   GoldenSlot: 0

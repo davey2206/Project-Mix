@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: 75% change to spawn Tiny ball when merging tiny, small and medium balls
+      value: 50% change to spawn Tiny ball when merging tiny, small and medium balls
         and tiny balls give 10 score
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}

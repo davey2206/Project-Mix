@@ -37,18 +37,14 @@ public class Merge_Upgrades : MonoBehaviour
     private void TinySpawn(Ball ball)
     {
         int rngMax = 101;
-        if (Upgrades.IncreaseMergeSpawns)
-        {
-            rngMax = rngMax - 25;
-        }
 
         int RNG = Random.Range(0, rngMax);
 
-        if (Upgrades.SmallMergeSpawnTiny && RNG <= 75 && ball.GetSize() == BallSize.Small || Upgrades.SmallMergeSpawnTiny && RNG <= 75 && ball.GetSize() == BallSize.Medium || Upgrades.SmallMergeSpawnTiny && RNG <= 75 && ball.GetSize() == BallSize.tiny)
+        if (Upgrades.SmallMergeSpawnTiny && RNG <= 50 && ball.GetSize() == BallSize.Small || Upgrades.SmallMergeSpawnTiny && RNG <= 50 && ball.GetSize() == BallSize.Medium || Upgrades.SmallMergeSpawnTiny && RNG <= 50 && ball.GetSize() == BallSize.tiny)
         {
             Instantiate(TinyBall, ball.transform.position, Quaternion.identity, BallPool);
         }
-        if (Upgrades.BigMergeSpawnTiny && RNG <= 75 && ball.GetSize() == BallSize.Large || Upgrades.BigMergeSpawnTiny && RNG <= 75 && ball.GetSize() == BallSize.Huge)
+        if (Upgrades.BigMergeSpawnTiny && RNG <= 50 && ball.GetSize() == BallSize.Large || Upgrades.BigMergeSpawnTiny && RNG <= 50 && ball.GetSize() == BallSize.Huge)
         {
             Instantiate(TinyBall, ball.transform.position, Quaternion.identity, BallPool);
         }
@@ -57,10 +53,6 @@ public class Merge_Upgrades : MonoBehaviour
     private void SmallGoldSpawn(Ball ball)
     {
         int rngMax = 101;
-        if (Upgrades.IncreaseMergeSpawns)
-        {
-            rngMax = rngMax - 25;
-        }
 
         int RNG = Random.Range(0, rngMax);
         if (Upgrades.SmallMergeSpawnGold && RNG <= 50 && ball.GetSize() == BallSize.Small || Upgrades.SmallMergeSpawnGold && RNG <= 50 && ball.GetSize() == BallSize.tiny || Upgrades.SmallMergeSpawnGold && RNG <= 50 && ball.GetSize() == BallSize.Medium)
