@@ -21,6 +21,7 @@ public class Ball_Score_Multi : MonoBehaviour
     [SerializeField] float SmallMergeSpawnTiny = 10;
     [SerializeField] float BigMergeSpawnGold = 0.25f;
     [SerializeField] float SmallMergeSpawnGold = 10;
+    [SerializeField] float MediumBonus = 50;
 
     public void Enter(Ball ball)
     {
@@ -86,6 +87,10 @@ public class Ball_Score_Multi : MonoBehaviour
         if (size == BallSize.Gold && Upgrades.BigMergeSpawnGold)
         {
             Score.AddMulti(BigMergeSpawnGold);
+        }
+        if(size == BallSize.Medium && Upgrades.MediumBonus)
+        {
+            Score.AddScore(MediumBonus);
         }
     }
 }

@@ -85,6 +85,8 @@ public class Upgrade_Object : ScriptableObject
     public bool FinalSpark;
     public bool TinyMechine;
     public bool GoldenSlot;
+    public bool MediumMerge;
+    public bool MediumBonus;
 
 
     public bool CheckUpgrade(Upgrades upgrade)
@@ -236,4 +238,6 @@ public enum Upgrades
     FinalSpark,
     GoldenBowl,
     TinyMechine,
+    MediumMerge,
+    MediumBonus,
 }

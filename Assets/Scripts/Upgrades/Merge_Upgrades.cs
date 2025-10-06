@@ -4,11 +4,13 @@ public class Merge_Upgrades : MonoBehaviour
 {
     [Header("ref")]
     [SerializeField] Upgrade_Object Upgrades;
+    [SerializeField] Score_Object Score;
     [SerializeField] Transform BallPool;
     [Header("Merge Count")]
     [SerializeField] int GildedMergeAmount = 10;
     [SerializeField] int TinyMachineAmount = 5;
     [SerializeField] int LuckyFusionAmount = 7;
+    [SerializeField] int MediumMergeAmount = 2;
     [Header("Balls")]
     [SerializeField] GameObject TinyBall;
     [SerializeField] GameObject SmallGoldBall;
@@ -17,21 +19,28 @@ public class Merge_Upgrades : MonoBehaviour
     [SerializeField] GameObject SmallResize;
 
     int MergeCount = 0;
+    int MediumMergeCount = 0;
 
     private void OnEnable()
     {
         MergeCount = 0;
+        MediumMergeCount = 0;
     }
 
     public void MergeEvent(Ball ball)
     {
         MergeCount++;
+        if (ball.GetSize() == BallSize.Medium)
+        {
+            MediumMergeCount++;
+        }
         TinySpawn(ball);
         SmallGoldSpawn(ball);
         ExplosiveBalls(ball);
         GildedMerge(ball);
         TinyMachine(ball);
         LuckyFusion(ball);
+        MediumMerge();
     }
 
     private void TinySpawn(Ball ball)
@@ -121,6 +130,14 @@ public class Merge_Upgrades : MonoBehaviour
             {
                 Instantiate(SmallGoldBall, ball.transform.position, Quaternion.identity, BallPool);
             }
+        }
+    }
+
+    private void MediumMerge()
+    {
+        if (Upgrades.MediumMerge && MediumMergeCount % MediumMergeAmount == 0)
+        {
+            Score.AddScore(100);
         }
     }
 }
