@@ -27,11 +27,11 @@ public class Ball_Score_Multi : MonoBehaviour
 
     [Header("Perks stats")]
     [SerializeField] float TinyMutli = 0.1f;
-    [SerializeField] float TinyScore = 25f;
+    [SerializeField] float TinyScore = 10f;
     [SerializeField] float SmallMutli = 0.1f;
-    [SerializeField] float SmallScore = 25f;
+    [SerializeField] float SmallScore = 10f;
     [SerializeField] float MediumMutli = 0.25f;
-    [SerializeField] float MediumScore = 50f;
+    [SerializeField] float MediumScore = 25f;
     [SerializeField] float GoldMutli = 0.25f;
     [SerializeField] float GoldScore = 50f;
 

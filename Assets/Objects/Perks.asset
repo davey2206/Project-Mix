@@ -21,10 +21,10 @@ MonoBehaviour:
   SmallMulti: 0
   SmallScore: 1
   MediumMulti: 0
-  MediumScore: 1
+  MediumScore: 0
   GoldMulti: 0
   GoldScore: 0
   BiggerBowl: 0
   SmallerBalls: 0
-  TinyMulti: 0
-  TinyScore: 0
+  TinyMulti: 1
+  TinyScore: 1

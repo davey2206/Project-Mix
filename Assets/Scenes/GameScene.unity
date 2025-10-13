@@ -3158,7 +3158,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Perk: {fileID: 0}
 --- !u!1 &126931067
 GameObject:
   m_ObjectHideFlags: 0
@@ -9365,7 +9364,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Perk: {fileID: 0}
 --- !u!1 &415181545
 GameObject:
   m_ObjectHideFlags: 0
@@ -17135,7 +17133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Perk: {fileID: 0}
 --- !u!1001 &932723385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39938,13 +39935,13 @@ MonoBehaviour:
   SmallMergeSpawnGold: 10
   MediumBonus: 50
   TinyMutli: 0.1
-  TinyScore: 25
+  TinyScore: 10
   SmallMutli: 0.1
-  SmallScore: 25
+  SmallScore: 10
   MediumMutli: 0.25
-  MediumScore: 50
+  MediumScore: 25
   GoldMutli: 0.25
-  GoldScore: 50
+  GoldScore: 25
 --- !u!114 &2146911443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39974,12 +39971,12 @@ MonoBehaviour:
   MultiScore1: 25
   MultiScore2: 50
   MultiScore3: 100
-  PerkScore1: 100
-  PerkScore2: 200
-  PerkScore3: 300
-  PerkMulti1: 1
-  PerkMulti2: 3
-  PerkMulti3: 5
+  PerkScore1: 50
+  PerkScore2: 100
+  PerkScore3: 200
+  PerkMulti1: 0.5
+  PerkMulti2: 1
+  PerkMulti3: 2
 --- !u!114 &2146911444
 MonoBehaviour:
   m_ObjectHideFlags: 0
