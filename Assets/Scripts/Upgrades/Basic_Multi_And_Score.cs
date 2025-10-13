@@ -4,6 +4,7 @@ using UnityEngine;
 public class Basic_Multi_And_Score : MonoBehaviour
 {
     [SerializeField] Upgrade_Object Upgrades;
+    [SerializeField] Perks_Object Perks;
     [SerializeField] Score_Object Score;
     [SerializeField] Level_Manager Level;
     [SerializeField] Coin_Object Coins;
@@ -23,15 +24,49 @@ public class Basic_Multi_And_Score : MonoBehaviour
     [SerializeField] float MultiScore2 = 50;
     [SerializeField] float MultiScore3 = 100;
 
+    [Header("Perks")]
+    [SerializeField] float PerkScore1 = 100;
+    [SerializeField] float PerkScore2 = 200;
+    [SerializeField] float PerkScore3 = 300;
+    [SerializeField] float PerkMulti1 = 1;
+    [SerializeField] float PerkMulti2 = 3;
+    [SerializeField] float PerkMulti3 = 5;
+
     private void OnEnable()
     {
         StartCoroutine(SetStats());
     }
 
-    IEnumerator SetStats()
+    public void PerkEffects()
     {
-        yield return new WaitForEndOfFrame();
+        if (Perks.Multi1)
+        {
+            Score.AddMulti(PerkMulti1);
+        }
+        if (Perks.Multi2)
+        {
+            Score.AddMulti(PerkMulti2);
+        }
+        if (Perks.Multi3)
+        {
+            Score.AddMulti(PerkMulti3);
+        }
+        if (Perks.Score1)
+        {
+            Score.AddMulti(PerkScore1);
+        }
+        if (Perks.Score2)
+        {
+            Score.AddMulti(PerkScore2);
+        }
+        if (Perks.Score3)
+        {
+            Score.AddMulti(PerkScore3);
+        }
+    }
 
+    private void UpgradeEffects()
+    {
         if (Upgrades.BasicMulti1 == true)
         {
             Score.AddMulti(Multi1);
@@ -56,7 +91,7 @@ public class Basic_Multi_And_Score : MonoBehaviour
         {
             Score.AddScore(Score3);
         }
-        if(Upgrades.MultiScore1 == true)
+        if (Upgrades.MultiScore1 == true)
         {
             Score.AddScore(MultiScore1);
             Score.AddMulti(ScoreMulti1);
@@ -116,5 +151,12 @@ public class Basic_Multi_And_Score : MonoBehaviour
             float multi = Coins.GetCoin() * 0.50f;
             Score.AddMulti(multi);
         }
+    }
+
+    IEnumerator SetStats()
+    {
+        yield return new WaitForEndOfFrame();
+        PerkEffects();
+        UpgradeEffects();
     }
 }

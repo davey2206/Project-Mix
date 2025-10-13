@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: 0
   Multi: 1
-  TotalScore: 12
+  TotalScore: 0
   CanScore: 1

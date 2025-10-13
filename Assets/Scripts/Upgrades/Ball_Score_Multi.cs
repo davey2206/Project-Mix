@@ -1,12 +1,14 @@
+using System.Drawing;
 using UnityEngine;
 
 public class Ball_Score_Multi : MonoBehaviour
 {
     [SerializeField] Upgrade_Object Upgrades;
+    [SerializeField] Perks_Object Perks;
     [SerializeField] Score_Object Score;
     [SerializeField] Coin_Object Coins;
 
-    [Header("Stats")]
+    [Header("Upgrade stats")]
     [SerializeField] float MediumIsPremiumScore = 10;
     [SerializeField] float MediumIsPremiumMulti = 0.1f;
     [SerializeField] float BackToStartScore = 5;
@@ -23,12 +25,24 @@ public class Ball_Score_Multi : MonoBehaviour
     [SerializeField] float SmallMergeSpawnGold = 10;
     [SerializeField] float MediumBonus = 50;
 
+    [Header("Perks stats")]
+    [SerializeField] float TinyMutli = 0.1f;
+    [SerializeField] float TinyScore = 25f;
+    [SerializeField] float SmallMutli = 0.1f;
+    [SerializeField] float SmallScore = 25f;
+    [SerializeField] float MediumMutli = 0.25f;
+    [SerializeField] float MediumScore = 50f;
+    [SerializeField] float GoldMutli = 0.25f;
+    [SerializeField] float GoldScore = 50f;
+
     public void Enter(Ball ball)
     {
-        Handle(ball.GetSize());
+        PerkEffects(ball.GetSize());
+        UpgradeEffects(ball.GetSize());
     }
 
-    private void Handle(BallSize size)
+
+    private void UpgradeEffects(BallSize size)
     {
         if (size == BallSize.Medium && Upgrades.MediumIsPremium)
         {
@@ -88,9 +102,45 @@ public class Ball_Score_Multi : MonoBehaviour
         {
             Score.AddMulti(BigMergeSpawnGold);
         }
-        if(size == BallSize.Medium && Upgrades.MediumBonus)
+        if (size == BallSize.Medium && Upgrades.MediumBonus)
         {
             Score.AddScore(MediumBonus);
+        }
+    }
+
+    private void PerkEffects(BallSize size)
+    {
+        if (size == BallSize.Small && Perks.SmallMulti)
+        {
+            Score.AddMulti(SmallMutli);
+        }
+        if (size == BallSize.Small && Perks.SmallScore)
+        {
+            Score.AddScore(SmallScore);
+        }
+        if (size == BallSize.tiny && Perks.TinyMulti)
+        {
+            Score.AddMulti(TinyMutli);
+        }
+        if (size == BallSize.tiny && Perks.TinyScore)
+        {
+            Score.AddScore(TinyScore);
+        }
+        if (size == BallSize.Gold && Perks.GoldMulti)
+        {
+            Score.AddMulti(GoldMutli);
+        }
+        if (size == BallSize.Gold && Perks.GoldScore)
+        {
+            Score.AddScore(GoldScore);
+        }
+        if (size == BallSize.Medium && Perks.MediumMulti)
+        {
+            Score.AddMulti(MediumMutli);
+        }
+        if (size == BallSize.Medium && Perks.MediumScore)
+        {
+            Score.AddScore(MediumScore);
         }
     }
 }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ca7d4b9944023468fc9fe1e81a6bf1, type: 3}
+  m_Name: Perks
+  m_EditorClassIdentifier: Assembly-CSharp::Perks_Object
+  Multi1: 0
+  Multi2: 0
+  Multi3: 0
+  Score1: 0
+  Score2: 0
+  Score3: 0
+  SmallMulti: 0
+  SmallScore: 1
+  MediumMulti: 0
+  MediumScore: 1
+  GoldMulti: 0
+  GoldScore: 0
+  BiggerBowl: 0
+  SmallerBalls: 0
+  TinyMulti: 0
+  TinyScore: 0

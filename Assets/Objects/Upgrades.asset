@@ -77,6 +77,8 @@ MonoBehaviour:
   LuckyFusion: 0
   IncreaseMergeSpawns: 0
   ExplosiveBalls: 0
-  FinalSpark: 1
+  FinalSpark: 0
   TinyMechine: 0
   GoldenSlot: 0
+  MediumMerge: 0
+  MediumBonus: 0

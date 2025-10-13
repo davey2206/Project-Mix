@@ -9,10 +9,12 @@ public class Level_Manager : MonoBehaviour
     [SerializeField] Score_Object Score;
     [SerializeField] Upgrade_Object Upgrades;
     [SerializeField] Coin_Object CoinObject;
+    [SerializeField] Perks_Object Perks;
 
     private void Awake()
     {
         Upgrades.ResetUpgrades();
+        Perks.ResetPerks();
         CoinObject.ResetCoins();
         ResetLevel();
     }
