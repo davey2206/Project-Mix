@@ -53,15 +53,15 @@ public class Basic_Multi_And_Score : MonoBehaviour
         }
         if (Perks.Score1)
         {
-            Score.AddMulti(PerkScore1);
+            Score.AddScore(PerkScore1);
         }
         if (Perks.Score2)
         {
-            Score.AddMulti(PerkScore2);
+            Score.AddScore(PerkScore2);
         }
         if (Perks.Score3)
         {
-            Score.AddMulti(PerkScore3);
+            Score.AddScore(PerkScore3);
         }
     }
 

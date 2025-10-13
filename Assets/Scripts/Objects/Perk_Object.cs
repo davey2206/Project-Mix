@@ -20,6 +20,11 @@ public class Perk_Object : ScriptableObject
         }
     }
 
+    public bool CheckPerk()
+    {
+        return Perks.CheckPerks(Perk);
+    }
+
     public string GetTitle()
     {
         return Title;

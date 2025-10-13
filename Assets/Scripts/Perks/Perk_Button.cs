@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEngine.Rendering.GPUSort;
 
 public class Perk_Button : MonoBehaviour
 {
@@ -11,11 +12,20 @@ public class Perk_Button : MonoBehaviour
     [Header("Events")]
     [SerializeField] UnityEvent ClickEvent;
 
-    public Perk_Object Perk;
+    Perk_Object Perk;
 
     private void OnEnable()
     {
-        Perk = PerkList[Random.Range(0, PerkList.Count)];
+        List<Perk_Object> perkList = new List<Perk_Object>();
+        foreach (var perk in PerkList)
+        {
+            if (!perk.CheckPerk())
+            {
+                perkList.Add(perk);
+            }
+        }
+
+        Perk = perkList[Random.Range(0, perkList.Count)];
 
         Title.text = Perk.GetTitle();
         Description.text = Perk.GetDescription();
