@@ -15,4 +15,4 @@ MonoBehaviour:
   Perks: {fileID: 11400000, guid: 6fac4c4861262114a821335b0feeee5f, type: 2}
   Perk: 7
   Title: Small Score
-  Description: Small balls give 25 score
+  Description: Small balls give 10 score

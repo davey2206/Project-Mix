@@ -64,6 +64,7 @@ public class Score_Object : ScriptableObject
 
     public void DisableScore()
     {
+        Debug.Log("test");
         CanScore = false;
     }
 }

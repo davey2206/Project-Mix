@@ -15,4 +15,4 @@ MonoBehaviour:
   Perks: {fileID: 11400000, guid: 6fac4c4861262114a821335b0feeee5f, type: 2}
   Perk: 9
   Title: Medium Score
-  Description: Medium balls give 50 score
+  Description: Medium balls give 25 score

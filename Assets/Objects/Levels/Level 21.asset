@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c268709d694050479bc0a080e697176, type: 3}
   m_Name: Level 21
   m_EditorClassIdentifier: 
-  Goal: 12500
+  Goal: 98000
   Level: 6
   Difficulty: 2
   Coins: 7

@@ -15,4 +15,4 @@ MonoBehaviour:
   Perks: {fileID: 11400000, guid: 6fac4c4861262114a821335b0feeee5f, type: 2}
   Perk: 0
   Title: Multi 1
-  Description: Gain 1 multi
+  Description: Gain 0.5 multi
