@@ -21,21 +21,6 @@ public class Mega_In_Bowl : MonoBehaviour
         }
     }
 
-    public void MageExitBowl(Ball ball)
-    {
-        if (ball.GetSize() == BallSize.Mega)
-        {
-            if (Upgrades.BowlSizeForEachMega == true)
-            {
-                Upgrades.ChangeBowlSize(-1);
-            }
-            if (Upgrades.BallSizeForEachMega == true)
-            {
-                Upgrades.ChangeBallSize(Mathf.Abs(BallSizeAmount));
-            }
-        }
-    }
-
     private void OnDisable()
     {
         if (Upgrades.BowlSizeForEachMega == true)
