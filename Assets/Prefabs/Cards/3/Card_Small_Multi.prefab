@@ -110,11 +110,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Small Multi
+      value: Small Surge
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 22.8
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

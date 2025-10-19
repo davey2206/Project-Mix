@@ -11,7 +11,6 @@ public class Ball_Size_Upgrades : MonoBehaviour
         {
             Upgrades.ChangeBallSize(-0.2f);
         }
-        
         if(Card.IsSell)
         {
             Upgrades.ChangeBallSize(0.2f);
@@ -29,6 +28,18 @@ public class Ball_Size_Upgrades : MonoBehaviour
         if(Card.IsSell)
         {
             Upgrades.ChangeBowlSize(1);
+            Upgrades.ChangeBallSize(0.2f);
+        }
+    }
+
+    public void TinyierTiny()
+    {
+        if (!Card.IsSell && Card.CanUpgrade())
+        {
+            Upgrades.ChangeBallSize(-0.2f);
+        }
+        if (Card.IsSell)
+        {
             Upgrades.ChangeBallSize(0.2f);
         }
     }

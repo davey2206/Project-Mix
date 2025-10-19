@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3425258935703057370, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_Name
-      value: Card_Small_Merge_Spawn_Tiny
+      value: Card_Cards_Are_Score
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: Card
-      value: 30
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 4137159534167582918, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: card
@@ -106,16 +106,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: 50% change to spawn Tiny ball when merging tiny, small and medium balls
-        and tiny balls give 10 score
+      value: Gain 25 score per card owned
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591506829884394505, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_text
-      value: Small Merge Spawn Tiny
+      value: Cards are Score
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_fontSize
-      value: 14.7
+      value: 16.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8637475356245055082, guid: e71be8e0655f2e544a89cccb2d57a042, type: 3}
       propertyPath: m_TextWrappingMode

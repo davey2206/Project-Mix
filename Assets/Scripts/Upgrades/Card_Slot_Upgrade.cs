@@ -16,4 +16,16 @@ public class Card_Slot_Upgrade : MonoBehaviour
             Upgrades.ChangeSlots(-2);
         }
     }
+
+    public void SlotMachine()
+    {
+        if (!Card.IsSell && Card.CanUpgrade())
+        {
+            Upgrades.ChangeSlots(3);
+        }
+        if (Card.IsSell)
+        {
+            Upgrades.ChangeSlots(-3);
+        }
+    }
 }

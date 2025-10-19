@@ -212,6 +212,14 @@ PrefabInstance:
       propertyPath: ColliderBall
       value: 
       objectReference: {fileID: 6712393595705167610}
+    - target: {fileID: 9002348354899750905, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002348354899750905, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 842748750651418631, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
     m_RemovedGameObjects: []
@@ -270,5 +278,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 0.815, y: 0.815}
   m_EdgeRadius: 0

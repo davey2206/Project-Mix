@@ -1,5 +1,7 @@
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using static UnityEngine.Rendering.GPUSort;
 
 [CreateAssetMenu(fileName = "Upgrades", menuName = "ScriptableObjects/Upgrade_Object", order = 1)]
 public class Upgrade_Object : ScriptableObject
@@ -87,6 +89,15 @@ public class Upgrade_Object : ScriptableObject
     public bool GoldenSlot;
     public bool MediumMerge;
     public bool MediumBonus;
+    public bool TinyBonus;
+    public bool SlotMachine;
+    public bool LoneWolf;
+    public bool MultiCard;
+    public bool ScoreCard;
+    public bool LessIsMore;
+    public bool TinyierTiny;
+    public bool Suika;
+    public bool CardAreScore;
 
 
     public bool CheckUpgrade(Upgrades upgrade)
@@ -240,4 +251,13 @@ public enum Upgrades
     TinyMechine,
     MediumMerge,
     MediumBonus,
+    TinyBonus,
+    SlotMachine,
+    LoneWolf,
+    MultiCard,
+    ScoreCard,
+    LessIsMore,
+    TinyierTiny,
+    Suika,
+    CardAreScore,
 }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Perk_Object
   Perks: {fileID: 11400000, guid: 6fac4c4861262114a821335b0feeee5f, type: 2}
   Perk: 2
-  Title: Multi 3
+  Title: Multi ++
   Description: Gain 2 multi

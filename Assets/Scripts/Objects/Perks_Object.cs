@@ -1,5 +1,6 @@
 using System.Reflection;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 [CreateAssetMenu(fileName = "Perks", menuName = "ScriptableObjects/Perks/Perks_Object", order = 1)]
 public class Perks_Object : ScriptableObject
@@ -21,6 +22,10 @@ public class Perks_Object : ScriptableObject
     public bool SmallerBalls;
     public bool TinyMulti;
     public bool TinyScore;
+    public bool GainGold1;
+    public bool GainGold2;
+    public bool GainGold3;
+    public bool ExtraSlot;
 
     public bool CheckPerks(Perks perk)
     {
@@ -67,5 +72,9 @@ public enum Perks
     SmallerBalls,
     TinyMulti,
     TinyScore,
+    GainGold1,
+    GainGold2,
+    GainGold3,
+    ExtraSlot,
 }
 

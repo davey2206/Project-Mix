@@ -66,6 +66,22 @@ public class Ball : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+            else if (Upgrades.Suika && otherBall != null && otherBall.GetSize() == Size)
+            {
+                if (!isDisabled && GetInstanceID() < otherBall.GetInstanceID())
+                {
+                    DisableSelf();
+                    otherBall.DisableSelf();
+
+                    Destroy(otherBall.gameObject);
+
+                    Instantiate(BlockBall, new Vector2(Random.Range(transform.position.x - 1f, transform.position.x + 1f), Random.Range(transform.position.y - 1f, transform.position.y + 1f)), Quaternion.identity, transform.parent);
+
+                    Score_Counter.AddScore(Score);
+
+                    Destroy(gameObject);
+                }
+            }
         }
         catch (System.Exception)
         {

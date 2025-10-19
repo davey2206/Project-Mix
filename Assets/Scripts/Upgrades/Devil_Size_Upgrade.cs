@@ -21,14 +21,7 @@ public class Devil_Size_Upgrade : MonoBehaviour
         
         if(Card.IsSell)
         {
-            if (Upgrades.DevilScore && Upgrades.DevilMulti)
-            {
-                Upgrades.ChangeBallSize(0.2f);
-            }
-            else
-            {
-                Upgrades.ChangeBallSize(-0.2f);
-            }
+            Upgrades.ChangeBallSize(-0.2f);
         }
     }
 
@@ -44,7 +37,7 @@ public class Devil_Size_Upgrade : MonoBehaviour
         
         if (Card.IsSell)
         {
-            if (!(Upgrades.DevilScore && Upgrades.DevilMulti && Upgrades.DevilSize))
+            if (Upgrades.DevilSize)
             {
                 Upgrades.ChangeBallSize(0.4f);
             }

@@ -16,6 +16,10 @@ public class Basic_Multi_And_Score : MonoBehaviour
     [SerializeField] float ScoreMulti1 = 1;
     [SerializeField] float ScoreMulti2 = 1.5f;
     [SerializeField] float ScoreMulti3 = 2;
+    [SerializeField] float DevilMulti = 10;
+    [SerializeField] float MultiCard = 1;
+    [SerializeField] float LoneWolf = 20;
+    [SerializeField] float LessIsMore = 10;
     [Header("Stats Score")]
     [SerializeField] float Score1 = 50;
     [SerializeField] float Score2 = 100;
@@ -23,6 +27,7 @@ public class Basic_Multi_And_Score : MonoBehaviour
     [SerializeField] float MultiScore1 = 25;
     [SerializeField] float MultiScore2 = 50;
     [SerializeField] float MultiScore3 = 100;
+    [SerializeField] float CardsAreScore = 25;
 
     [Header("Perks")]
     [SerializeField] float PerkScore1 = 100;
@@ -150,6 +155,26 @@ public class Basic_Multi_And_Score : MonoBehaviour
         {
             float multi = Coins.GetCoin() * 0.50f;
             Score.AddMulti(multi);
+        }
+        if (Upgrades.DevilSize && Upgrades.DevilMulti && Upgrades.DevilScore)
+        {
+            Score.AddMulti(DevilMulti);
+        }
+        if (Upgrades.CardAreScore)
+        {
+            Score.AddScore(CardsAreScore * Upgrades.NumberOfUpgrades);
+        }
+        if (Upgrades.MultiCard)
+        {
+            Score.AddMulti(MultiCard * Upgrades.NumberOfUpgrades);
+        }
+        if (Upgrades.LoneWolf)
+        {
+            Score.AddMulti(LoneWolf - (5 * Upgrades.NumberOfUpgrades) + 5);
+        }
+        if (Upgrades.LessIsMore && Upgrades.NumberOfUpgrades < 3)
+        {
+            Score.AddMulti(LessIsMore);
         }
     }
 

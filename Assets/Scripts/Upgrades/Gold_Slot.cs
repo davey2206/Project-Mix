@@ -19,13 +19,29 @@ public class Gold_Slot : MonoBehaviour
     {
         int newThreshold = (int)Coins.GetCoin() / 5;
 
-        Upgrades.UpgradeCapGoldChange = newThreshold;
-
-        if (newThreshold != lastThreshold)
+        if (newThreshold >= 5)
         {
-            int difference = newThreshold - lastThreshold;
-            Upgrades.ChangeSlots(difference);
-            lastThreshold = newThreshold;
+            Upgrades.UpgradeCapGoldChange = 5;
+
+            newThreshold = 5;
+
+            if (newThreshold != lastThreshold)
+            {
+                int difference = newThreshold - lastThreshold;
+                Upgrades.ChangeSlots(difference);
+                lastThreshold = newThreshold;
+            }
+        }
+        else
+        {
+            Upgrades.UpgradeCapGoldChange = newThreshold;
+
+            if (newThreshold != lastThreshold)
+            {
+                int difference = newThreshold - lastThreshold;
+                Upgrades.ChangeSlots(difference);
+                lastThreshold = newThreshold;
+            }
         }
     }
 }

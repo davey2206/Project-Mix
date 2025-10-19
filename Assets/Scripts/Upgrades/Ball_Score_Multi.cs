@@ -24,6 +24,11 @@ public class Ball_Score_Multi : MonoBehaviour
     [SerializeField] float BigMergeSpawnGold = 0.25f;
     [SerializeField] float SmallMergeSpawnGold = 10;
     [SerializeField] float MediumBonus = 50;
+    [SerializeField] float TinyBonusScore = 25;
+    [SerializeField] float TinyBonusMulti = 0.25f;
+    [SerializeField] float ScoreCard = 5;
+    [SerializeField] float TinyierTinyScore = 10;
+    [SerializeField] float TinyierTinyMulti = 0.1f;
 
     [Header("Perks stats")]
     [SerializeField] float TinyMutli = 0.1f;
@@ -105,6 +110,20 @@ public class Ball_Score_Multi : MonoBehaviour
         if (size == BallSize.Medium && Upgrades.MediumBonus)
         {
             Score.AddScore(MediumBonus);
+        }
+        if(size == BallSize.tiny && Upgrades.TinyBonus)
+        {
+            Score.AddScore(TinyBonusScore);
+            Score.AddMulti(TinyBonusMulti);
+        }
+        if (Upgrades.ScoreCard)
+        {
+            Score.AddScore(ScoreCard * Upgrades.NumberOfUpgrades);
+        }
+        if (Upgrades.TinyierTiny)
+        {
+            Score.AddScore(TinyierTinyScore);
+            Score.AddMulti(TinyierTinyMulti);
         }
     }
 

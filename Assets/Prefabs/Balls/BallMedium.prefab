@@ -196,6 +196,14 @@ PrefabInstance:
       propertyPath: PopEffect
       value: 
       objectReference: {fileID: 2520794277556555006, guid: 77581d1bfb09f394c9aa3c102ccd20ea, type: 3}
+    - target: {fileID: 9002348354899750905, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002348354899750905, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 842748750651418631, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
     m_RemovedGameObjects: []
@@ -256,12 +264,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.40401623, y: 0.042373}
-      - {x: -0.4006644, y: -0.03964244}
-      - {x: -0.035063744, y: -0.39877486}
-      - {x: 0.03752041, y: -0.39631823}
-      - {x: 0.39705542, y: -0.04124179}
-      - {x: 0.3952919, y: 0.035168685}
-      - {x: 0.04026343, y: 0.40098178}
-      - {x: -0.044096537, y: 0.39745253}
+    - - {x: -0.41950926, y: 0.04409445}
+      - {x: -0.41787884, y: -0.05341403}
+      - {x: -0.047113866, y: -0.41771072}
+      - {x: 0.05817775, y: -0.41869697}
+      - {x: 0.42115566, y: -0.041241813}
+      - {x: 0.4193921, y: 0.047218826}
+      - {x: 0.036820546, y: 0.42163914}
+      - {x: -0.040653646, y: 0.41983134}
   m_UseDelaunayMesh: 0
