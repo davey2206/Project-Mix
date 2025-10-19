@@ -14,20 +14,26 @@ public class Goal_Manager : MonoBehaviour
     private void OnEnable()
     {
         Coins.LevelCoin = 0;
-    }
-
-    void Update()
-    {
-        if (level_Manager.CheckIfGoalHit() && !LevelDone)
-        {
-            LevelDone = true;
-            StartCoroutine(CountDown());
-        }
+        StartCoroutine(Check());
     }
 
     public void ResetLevelDone()
     {
         LevelDone = false;
+        StopAllCoroutines();
+    }
+
+    IEnumerator Check()
+    {
+        while (!LevelDone)
+        {
+            yield return new WaitForSeconds(3);
+            if (level_Manager.CheckIfGoalHit() && !LevelDone)
+            {
+                LevelDone = true;
+                StartCoroutine(CountDown());
+            }
+        }
     }
 
     IEnumerator CountDown()
