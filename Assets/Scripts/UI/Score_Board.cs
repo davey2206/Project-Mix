@@ -59,18 +59,23 @@ public class Score_Board : MonoBehaviour
     {
         while (true)
         {
-            // Countdown before refresh
-            float timer = refreshInterval;
-            while (timer > 0f)
+            // Determine how often to update
+            float updateDelay = (IsTotalScore ? refreshInterval : 0f);
+            float timer = updateDelay;
+
+            if (IsTotalScore && CountdownText != null)
+                CountdownText.text = $"{Mathf.CeilToInt(timer)}";
+
+            // Wait for interval if it's a total score
+            while (IsTotalScore && timer > 0f)
             {
+                timer -= Time.deltaTime;
                 if (CountdownText != null)
                     CountdownText.text = $"{Mathf.CeilToInt(timer)}";
-
-                timer -= Time.deltaTime;
                 yield return null;
             }
 
-            // Perform refresh
+            // Fetch score depending on mode
             double currentScore = 0;
             if (IsTotalScore)
                 currentScore = Score.GetTotalScore();
@@ -79,13 +84,15 @@ public class Score_Board : MonoBehaviour
             else if (IsMulti)
                 currentScore = Score.GetMulti();
 
+            // Animate if score increased
             if (currentScore > previousScore)
             {
                 double delta = currentScore - previousScore;
-                if(IsTotalScore)
+
+                if (IsTotalScore)
                 {
                     TextMeshProUGUI text = Instantiate(FloatingText, FloatingTextPerent);
-                    text.text = "+ " + delta.ToString();
+                    text.text = "+ " + delta.ToString("F0");
                 }
 
                 float scaleMultiplier = 1f + (float)(delta * scalePerPoint);
@@ -101,9 +108,8 @@ public class Score_Board : MonoBehaviour
             previousScore = currentScore;
             ScoreText.text = currentScore.ToString(IsMulti ? "F2" : "F0");
 
-            // Reset countdown display
-            if (CountdownText != null)
-                CountdownText.text = $"Refreshing...";
+            // If it's not total score, update every frame
+            yield return IsTotalScore ? null : null;
         }
     }
 

@@ -9,7 +9,10 @@ public class Display_Switch : MonoBehaviour
 
     void SetFullScreenWindowOnMainDisplay()
     {
-#if !UNITY_EDITOR && UNITY_STANDALONE_WIN
+#if UNITY_WEBGL && !UNITY_EDITOR
+        // Set resolution for WebGL builds
+        Screen.SetResolution(1280, 720, false);
+#elif !UNITY_EDITOR && UNITY_STANDALONE_WIN
         // Move window to main display position (0,0)
         MoveWindowToMainDisplay();
 #endif

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28397f67faba6b64e99d7c433bafaa31, type: 3}
   m_Name: Score
   m_EditorClassIdentifier: 
-  Score: 1000
-  Multi: 1
-  TotalScore: 1000
-  CanScore: 1
+  Score: 12117
+  Multi: 238.15
+  TotalScore: 2885663.5500000003
+  CanScore: 0

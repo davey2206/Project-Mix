@@ -30,7 +30,7 @@ public class Main_Menu : MonoBehaviour
     IEnumerator PlayCloneTimer()
     {
         yield return new WaitForSeconds(0.4f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     IEnumerator SettingsTimer()

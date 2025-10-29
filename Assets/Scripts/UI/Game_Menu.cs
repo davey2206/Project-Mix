@@ -1,18 +1,19 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Game_Menu : MonoBehaviour
 {
     [SerializeField] GameObject Menu;
+    bool pauze = false;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && Menu != null)
         {
-            if (Time.timeScale == 1)
+            if (!pauze)
             {
                 ShowMenu();
-                Time.timeScale = 0;
             }
             else
             {
@@ -23,17 +24,18 @@ public class Game_Menu : MonoBehaviour
 
     public void ShowMenu()
     {
+        pauze = true;
         Menu.SetActive(true);
     }
     public void CloseMenu()
     {
-        Time.timeScale = 1;
+        pauze=false;
         Menu.SetActive(false);
     }
 
     public void CloseMenuButton()
     {
-        Time.timeScale = 1;
+        pauze = false;
         StartCoroutine(CloseMenuButtonTimer());
     }
 

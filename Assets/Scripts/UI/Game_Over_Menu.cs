@@ -17,7 +17,7 @@ public class Game_Over_Menu : MonoBehaviour
     IEnumerator HomeTimer()
     {
         yield return new WaitForSeconds(0.4f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     IEnumerator RestartSceneTimer()

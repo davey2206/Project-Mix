@@ -231,15 +231,15 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4105108537718698307, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1956876111497822192}
+      addedObject: {fileID: 350640272253280398}
   m_SourcePrefab: {fileID: 100100000, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
 --- !u!1 &3358601075879933264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4105108537718698307, guid: ed878bcfc16d11c47b403148b513cbdd, type: 3}
   m_PrefabInstance: {fileID: 1613524059670447123}
   m_PrefabAsset: {fileID: 0}
---- !u!60 &1956876111497822192
-PolygonCollider2D:
+--- !u!58 &350640272253280398
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -273,40 +273,4 @@ PolygonCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.0012070881, y: 0.43270454}
-      - {x: -0.15850706, y: 0.42092213}
-      - {x: -0.26525533, y: 0.3886341}
-      - {x: -0.3537748, y: 0.33807316}
-      - {x: -0.39366663, y: 0.25282437}
-      - {x: -0.42302743, y: 0.11572314}
-      - {x: -0.4267555, y: -0.01888769}
-      - {x: -0.4137479, y: -0.17536706}
-      - {x: -0.387371, y: -0.26379532}
-      - {x: -0.34104466, y: -0.33624706}
-      - {x: -0.28239766, y: -0.3749182}
-      - {x: -0.21473794, y: -0.40225422}
-      - {x: -0.13955067, y: -0.4122238}
-      - {x: -0.006689394, y: -0.41831115}
-      - {x: 0.18668157, y: -0.40841502}
-      - {x: 0.2952334, y: -0.38271567}
-      - {x: 0.36861807, y: -0.31790054}
-      - {x: 0.40393376, y: -0.2293762}
-      - {x: 0.42025563, y: -0.13459888}
-      - {x: 0.4254981, y: 0.019575356}
-      - {x: 0.41525367, y: 0.17375316}
-      - {x: 0.3919314, y: 0.2563126}
-      - {x: 0.34206405, y: 0.33707318}
-      - {x: 0.2583406, y: 0.39406335}
-      - {x: 0.17319284, y: 0.41544902}
-  m_UseDelaunayMesh: 0
+  m_Radius: 0.44

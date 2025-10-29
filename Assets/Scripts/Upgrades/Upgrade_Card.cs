@@ -10,6 +10,7 @@ public class Upgrade_Card : MonoBehaviour
     [SerializeField] public Upgrades Card;
     [SerializeField] float Price;
     [SerializeField] public bool IsSell = false;
+    [SerializeField] public bool IsDisplay = false;
 
     [Header("Ref Objects")]
     [SerializeField] Coin_Object Coins;
@@ -29,8 +30,16 @@ public class Upgrade_Card : MonoBehaviour
         BuyPriceText.text = Price.ToString();
         SellPriceText.text = (Mathf.FloorToInt(Price / 2)).ToString();
 
-        BuyPrice.SetActive(!IsSell);
-        SellPrice.SetActive(IsSell);
+        if (IsDisplay)
+        {
+            BuyPrice.SetActive(false);
+            SellPrice.SetActive(false);
+        }
+        else
+        {
+            BuyPrice.SetActive(!IsSell);
+            SellPrice.SetActive(IsSell);
+        }
 
         InitializeUpgradeActions();
     }
@@ -80,7 +89,7 @@ public class Upgrade_Card : MonoBehaviour
 
     public void Buy()
     {
-        if (CanUpgrade())
+        if (CanUpgrade() && !IsDisplay)
         {
             Coins.RemoveCoin(Price);
             AllUpgrades.NumberOfUpgrades++;
@@ -94,14 +103,17 @@ public class Upgrade_Card : MonoBehaviour
 
     public void Sell()
     {
-        Coins.AddCoin(Mathf.FloorToInt(Price / 2));
-        AllUpgrades.NumberOfUpgrades--;
+        if (!IsDisplay)
+        {
+            Coins.AddCoin(Mathf.FloorToInt(Price / 2));
+            AllUpgrades.NumberOfUpgrades--;
 
-        // Remove the upgrade using the dictionary
-        ApplyUpgrade(Card, false);
-        IsSell = false;
+            // Remove the upgrade using the dictionary
+            ApplyUpgrade(Card, false);
+            IsSell = false;
 
-        StartCoroutine(UpdateInventory());
+            StartCoroutine(UpdateInventory());
+        }
     }
 
     private void ApplyUpgrade(Upgrades upgrade, bool enable)
